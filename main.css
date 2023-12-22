@@ -1,0 +1,27 @@
+body, html {
+  width: 100vw;
+  height: 100vh;
+  font-size: 12px;
+  margin: 0;
+}
+
+nav {
+  width: 100vw;
+  height: 4em;
+  background-color: #0B712F;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.nav__hamburger {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */

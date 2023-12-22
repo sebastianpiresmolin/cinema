@@ -1,0 +1,31 @@
+$green : #0B712F;
+$black : #000;
+$grey : #0E0F0F;
+$white : #fff;
+
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 12px;
+    margin: 0;
+}
+
+nav {
+    width: 100vw;
+    height: 4em;
+    background-color: $green;
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+.nav__hamburger {
+    width: fit-content;
+    height: fit-content;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
