@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
 body,
 html {
   width: 100vw;
@@ -8,7 +13,8 @@ html {
 
 nav {
   width: 100vw;
-  height: 4em;
+  height: 6vh;
+  min-height: 6vh;
   background-color: #0b712f;
   display: flex;
   align-items: center;
@@ -26,7 +32,7 @@ nav {
   justify-content: center;
   align-items: center;
   margin-left: 5vw;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
@@ -43,7 +49,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .nav__homepage a {
@@ -62,7 +68,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .nav__map a {
@@ -79,6 +85,38 @@ nav {
   justify-content: center;
   align-items: center;
   margin-left: 6vw;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   cursor: pointer;
+}
+
+.searchbox__container {
+  display: none;
+  width: 100vw;
+  height: 6vh;
+  min-height: 6vh;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  margin: auto;
+}
+.searchbox__container input {
+  height: inherit;
+  width: inherit;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding-left: 2vw;
+}
+.searchbox__container input::-moz-placeholder {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 1;
+}
+.searchbox__container input::placeholder {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */
