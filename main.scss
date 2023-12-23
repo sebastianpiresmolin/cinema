@@ -1,31 +1,82 @@
-$green : #0B712F;
-$black : #000;
-$grey : #0E0F0F;
-$white : #fff;
+$green: #0b712f;
+$black: #000;
+$grey: #0e0f0f;
+$white: #fff;
 
-
-body, html {
-    width: 100vw;
-    height: 100vh;
-    font-size: 12px;
-    margin: 0;
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  font-size: 12px;
+  margin: 0;
 }
 
 nav {
-    width: 100vw;
-    height: 4em;
-    background-color: $green;
-    display: flex;
-    position: sticky;
-    top: 0;
+  width: 100vw;
+  height: 4em;
+  background-color: $green;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
 }
 
 .nav__hamburger {
-    width: fit-content;
-    height: fit-content;
+  width: fit-content;
+  height: fit-content;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5vw;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.nav__homepage {
+  width: fit-content;
+  height: fit-content;
+  margin-left: 6vw;
+  margin-right: 31vw;
+  i {
     color: $white;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.5em;
     cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+  }
 }
+
+.nav__map {
+  width: fit-content;
+  height: fit-content;
+  margin-left: 31vw;
+  i {
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.nav__searchbar {
+  width: fit-content;
+  height: fit-content;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6vw;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+

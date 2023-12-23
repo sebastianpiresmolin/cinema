@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   width: 100vw;
   height: 100vh;
   font-size: 12px;
@@ -8,8 +9,9 @@ body, html {
 nav {
   width: 100vw;
   height: 4em;
-  background-color: #0B712F;
+  background-color: #0b712f;
   display: flex;
+  align-items: center;
   position: sticky;
   top: 0;
 }
@@ -23,5 +25,60 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 5vw;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.nav__homepage {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: 6vw;
+  margin-right: 31vw;
+}
+.nav__homepage i {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.nav__homepage a {
+  text-decoration: none;
+}
+
+.nav__map {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: 31vw;
+}
+.nav__map i {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.nav__map a {
+  text-decoration: none;
+}
+
+.nav__searchbar {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6vw;
+  font-size: 1.5em;
   cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
