@@ -31,9 +31,14 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 5vw;
+  margin-left: 6vw;
   font-size: 1.5rem;
   cursor: pointer;
+}
+@media (min-width: 1040px) {
+  .nav__hamburger {
+    display: none;
+  }
 }
 
 .nav__homepage {
@@ -42,7 +47,13 @@ nav {
   height: -moz-fit-content;
   height: fit-content;
   margin-left: 6vw;
-  margin-right: 31vw;
+  margin-right: 30vw;
+}
+@media (min-width: 1040px) {
+  .nav__homepage {
+    margin-left: 2vw;
+    margin-right: 8vw;
+  }
 }
 .nav__homepage i {
   color: #fff;
@@ -56,12 +67,41 @@ nav {
   text-decoration: none;
 }
 
+.nav__links {
+  display: none;
+}
+@media (min-width: 1040px) {
+  .nav__links {
+    display: flex;
+  }
+}
+.nav__links ul {
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav__links ul li {
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+.nav__links ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
 .nav__map {
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-left: 31vw;
+  margin-left: 30vw;
 }
 .nav__map i {
   color: #fff;
@@ -100,6 +140,7 @@ nav {
   margin: auto;
 }
 .searchbox__container input {
+  border-style: none;
   height: inherit;
   width: inherit;
   background-color: #000;
@@ -119,4 +160,21 @@ nav {
   font-size: 1.2rem;
   font-weight: 400;
   opacity: 1;
+}
+
+.closeInput {
+  z-index: 2;
+  width: 10vw;
+  height: 6vh;
+  max-height: 6vh;
+  background-color: #000;
+}
+.closeInput i {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.2vh;
+  font-size: 1.5rem;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
