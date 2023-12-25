@@ -72,6 +72,9 @@ nav {
     align-items: center;
     font-size: 1.5rem;
     cursor: pointer;
+    &:hover {
+        color: $grey;
+      }
   }
   a {
     text-decoration: none;
@@ -101,6 +104,9 @@ nav {
         font-size: 1.5rem;
         font-weight: 400;
         cursor: pointer;
+        &:hover {
+            color: $grey;
+          }
       }
     }
   }
@@ -117,6 +123,9 @@ nav {
     align-items: center;
     font-size: 1.5rem;
     cursor: pointer;
+    &:hover {
+        color: $grey;
+      }
   }
   a {
     text-decoration: none;
@@ -133,6 +142,9 @@ nav {
   margin-left: 6vw;
   font-size: 1.5rem;
   cursor: pointer;
+  &:hover {
+    color: $grey;
+  }
 }
 
 .searchbox__container {

@@ -63,6 +63,9 @@ nav {
   font-size: 1.5rem;
   cursor: pointer;
 }
+.nav__homepage i:hover {
+  color: #0e0f0f;
+}
 .nav__homepage a {
   text-decoration: none;
 }
@@ -95,6 +98,9 @@ nav {
   font-weight: 400;
   cursor: pointer;
 }
+.nav__links ul li a:hover {
+  color: #0e0f0f;
+}
 
 .nav__map {
   width: -moz-fit-content;
@@ -110,6 +116,9 @@ nav {
   align-items: center;
   font-size: 1.5rem;
   cursor: pointer;
+}
+.nav__map i:hover {
+  color: #0e0f0f;
 }
 .nav__map a {
   text-decoration: none;
@@ -127,6 +136,9 @@ nav {
   margin-left: 6vw;
   font-size: 1.5rem;
   cursor: pointer;
+}
+.nav__searchbar:hover {
+  color: #0e0f0f;
 }
 
 .searchbox__container {
