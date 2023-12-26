@@ -9,7 +9,35 @@
   </head>
   <main>
     <!----------------------------NAVBAR FOR ABOUT PAGE START --------------------------->
-    <nav></nav>
+    <nav>
+      <div class="nav__hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="nav__homepage">
+        <a href="index.html"><i class="fa-regular fa-square"></i></a>
+      </div>
+      <!-- These links need anchors to the correct parts of about.html-->
+      <div class="nav__links">
+        <ul>
+          <li><a href="about.html">Biljetter</a></li>
+          <li><a href="news.html">Nyheter</a></li>
+          <li><a href="movies.html">Film och trailers</a></li>
+          <li><a href="about.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <!-- nav__map needs to be modied to link directly to the anchor point
+      that is displaying the map on about.html -->
+      <div class="nav__map"><a href="about.html"><i class="fa-solid fa-location-dot"></i></a>
+      </div>
+      <div class="nav__searchbar"><i id="navsearch" class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <!-- the serachbox content need to be added to filter upon entering -->
+      <div id="searchbox" class="searchbox__container">
+        <input type="text" placeholder="Sök efter filmer..." />
+        <div id="closeInput" class="closeInput"><i class="fa-solid fa-x"></i>
+        </div>
+      </div>
+    </nav>
 
     <!----------------------------Maybe add html for each site in the nav --------------------------->
 
