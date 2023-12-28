@@ -33,3 +33,58 @@ inputElement.addEventListener("keyup", function (event) {
 });
 
 //--- Search Box ---//
+
+
+//--- Movie Card ---//
+
+class MovieCard {
+  constructor(movie) {
+    this.movie = movie;
+  }
+
+  createCard() {
+    // Create a container div for each movie card
+    var movieContainer = document.createElement("div");
+    movieContainer.className = "movie-card";
+
+    // Create image element
+    var image = document.createElement("img");
+    image.src = this.movie.image;
+    image.alt = this.movie.title;
+
+    // Create title element
+    var title = document.createElement("h2");
+    title.textContent = this.movie.title;
+
+    // Create date element
+    var date = document.createElement("p");
+    date.textContent = "Release Date: " + this.movie.date;
+
+    // Create genre element
+    var genre = document.createElement("p");
+    genre.textContent = "Genre: " + this.movie.genre;
+
+    // Create description element
+    var description = document.createElement("p");
+    description.textContent = this.movie.description;
+
+    // Append elements to the container
+    movieContainer.appendChild(image);
+    movieContainer.appendChild(title);
+    movieContainer.appendChild(date);
+    movieContainer.appendChild(genre);
+    movieContainer.appendChild(description);
+
+    // Append the container to the body or another HTML element
+    document.body.appendChild(movieContainer);
+  }
+}
+
+// window.onload event in main.js
+window.onload = function () {
+  // Assuming movies array is defined in data.js
+  for (var i = 0; i < movies.length; i++) {
+    var movieCard = new MovieCard(movies[i]);
+    movieCard.createCard();
+  }
+};
