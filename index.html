@@ -1,22 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tidaholms biohörna</title>
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="main.css" />
-  </head>
 
-  <header>
-    <nav></nav>
-    <iframe src="" frameborder="0"></iframe>
-  </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tidaholms biohörna</title>
+  <script src="main.js" defer></script>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-  <main>
-    <!----------------------------TOPPLISTA START --------------------------->
+<header>
+  <nav>
+    <div class="nav__hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="nav__homepage">
+      <a href="index.html"><i class="fa-regular fa-square"></i></a>
+    </div>
+    <!-- These links need anchors to the correct parts of about.html-->
+    <div class="nav__links">
+      <ul>
+        <li><a href="about.html">Biljetter</a></li>
+        <li><a href="news.html">Nyheter</a></li>
+        <li><a href="movies.html">Film och trailers</a></li>
+        <li><a href="about.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <!-- nav__map needs to be modied to link directly to the anchor point
+    that is displaying the map on about.html -->
+    <div class="nav__map"><a href="about.html"><i class="fa-solid fa-location-dot"></i></a>
+    </div>
+    <div class="nav__searchbar"><i id="navsearch" class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <!-- the serachbox content need to be added to filter upon entering -->
+    <div id="searchbox" class="searchbox__container">
+      <input type="text" placeholder="Sök efter filmer..." />
+      <div id="closeInput" class="closeInput"><i class="fa-solid fa-x"></i>
+      </div>
+    </div>
+  </nav>
+  <iframe src="" frameborder="0"></iframe>
+</header>
 
-    <!----------------------------TOPPLISTA END ----------------------------->
+<main>
+  <!----------------------------TOPPLISTA START --------------------------->
+
 
     <!----------------------------FILMREKLAM START -------------------------->
     <article class="filmAdvertising" align="center">
@@ -34,17 +68,25 @@
     </article>
     <!----------------------------FILMREKLAM END ---------------------------->
 
-    <!----------------------------TEXT IMAGE BOXES START ----------------------------->
+  <!----------------------------TOPPLISTA END ----------------------------->
 
-    <!----------------------------TEXT IMAGE BOXES END ----------------------------->
+  <!----------------------------FILMREKLAM START -------------------------->
 
-    <!----------------------------KOMMANDE START ----------------------------->
 
-    <!----------------------------KOMMANDE END ------------------------------->
+  <!----------------------------FILMREKLAM END ---------------------------->
 
-    <!----------------------------NYHETER START ----------------------------->
-    <!----------------------------NYHETER END ----------------------------->
-  </main>
+  <!----------------------------TEXT IMAGE BOXES START ----------------------------->
 
-  <footer></footer>
+  <!----------------------------TEXT IMAGE BOXES END ----------------------------->
+
+  <!----------------------------KOMMANDE START ----------------------------->
+
+  <!----------------------------KOMMANDE END ------------------------------->
+
+  <!----------------------------NYHETER START ----------------------------->
+  <!----------------------------NYHETER END ----------------------------->
+</main>
+
+<footer></footer>
+
 </html>
