@@ -85,14 +85,15 @@ class MovieCard {
   }
 }
 
-// window.onload event in main.js
+
 window.onload = function () {
-  // Assuming movies array is defined in data.js
   for (var i = 0; i < movies.length; i++) {
     var movieCard = new MovieCard(movies[i]);
     movieCard.createCard();
   }
 };
+
+//--- Movie Scroll ---//
 
 const scrollContainer = document.getElementById('scroll-container');
 let currentPosition = 0;
@@ -119,5 +120,5 @@ function nextMovies() {
     }
 }
 
-// Initial display
+
 showMovies();
