@@ -23,9 +23,7 @@ nav {
 }
 
 .nav__hamburger {
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   color: #fff;
   display: flex;
@@ -42,9 +40,7 @@ nav {
 }
 
 .nav__homepage {
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   margin-left: 6vw;
   margin-right: 30vw;
@@ -103,9 +99,7 @@ nav {
 }
 
 .nav__map {
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   margin-left: 30vw;
 }
@@ -125,9 +119,7 @@ nav {
 }
 
 .nav__searchbar {
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   color: #fff;
   display: flex;
@@ -161,12 +153,6 @@ nav {
   font-weight: 400;
   padding-left: 2vw;
 }
-.searchbox__container input::-moz-placeholder {
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 400;
-  opacity: 1;
-}
 .searchbox__container input::placeholder {
   color: #fff;
   font-size: 1.2rem;
@@ -189,4 +175,4 @@ nav {
   margin-top: 1.2vh;
   font-size: 1.5rem;
   cursor: pointer;
-}/*# sourceMappingURL=main.css.map */
+}

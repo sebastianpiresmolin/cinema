@@ -1,0 +1,20 @@
+{
+  "name": "cinema",
+  "version": "1.0.0",
+  "main": "",
+  "scripts": {
+    "sass:watch": "sass --no-source-map --watch main.scss main.css",
+    "sass:compile": "sass --no-source-map main.scss main.css",
+    "open-cypress": "cypress open",
+    "test": "cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  },
+  "description": "",
+  "dependencies": {
+    "cypress": "^13.6.2"
+  }
+}
