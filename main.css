@@ -201,18 +201,10 @@ nav {
   display: flex;
   overflow: hidden;
   border: 1px solid #ddd;
-  width: 50%; /* Set a fixed width for the container */
+  gap: 10px;
 }
 
-.movieContainer{
-  .movie-card {
-    display: inline-block;
-    width: 10px; /* Adjust the width of your movie cards */
-    margin-right: 10px; /* Adjust the spacing between cards */
-    border: 1px solid #ddd; /* Add styling to your movie cards */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  } 
-}
+
 
 .navigation-button {
   cursor: pointer;
@@ -220,8 +212,40 @@ nav {
   padding: 5px;
 }
 
-.moviebox {
+.movie__wrapper {
   display: flex;
   justify-content: center;
+
 }
 
+.movie-card p {
+  display: none;
+}
+.movie-card img{
+  width: 196px;
+  height: auto;
+  gap: 10%;
+}
+
+.movie-card h2 {
+  margin-top: 0.5rem;
+    font-size: 1rem;
+    line-height: .875rem;
+    min-height: 1.75rem;
+    opacity: .7;
+    white-space: normal;
+    max-height: 1.75rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-width: 196px;
+}
+
+#Topplista_h1 {
+  align-items: center;
+}
+
+.hidden-movie {
+  display: none;
+}

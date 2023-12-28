@@ -78,6 +78,10 @@ class MovieCard {
 
     var containerElement = document.getElementById("movieContainer");
     containerElement.appendChild(movieContainer);
+
+    if ([5, 6, 7, 8, 9, 10, 11, 12].includes(this.movie.id)) {
+      movieContainer.classList.add("hidden-movie");
+    }
   }
 }
 
@@ -102,7 +106,7 @@ function showMovies() {
 
 function prevMovies() {
     if (currentPosition > 0) {
-        currentPosition -= 1;
+        currentPosition -= 4;
         showMovies();
     }
 }
@@ -110,7 +114,7 @@ function prevMovies() {
 function nextMovies() {
     const movieCards = document.querySelectorAll('.movie-card');
     if (currentPosition < movieCards.length - 4) {
-        currentPosition += 1;
+        currentPosition += 4;
         showMovies();
     }
 }
