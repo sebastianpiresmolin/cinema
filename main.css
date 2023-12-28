@@ -190,3 +190,38 @@ nav {
   font-size: 1.5rem;
   cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
+
+
+
+
+
+
+/* Movie CARDS CSS  */
+#movieContainer {
+  display: flex;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  width: 50%; /* Set a fixed width for the container */
+}
+
+.movieContainer{
+  .movie-card {
+    display: inline-block;
+    width: 10px; /* Adjust the width of your movie cards */
+    margin-right: 10px; /* Adjust the spacing between cards */
+    border: 1px solid #ddd; /* Add styling to your movie cards */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  } 
+}
+
+.navigation-button {
+  cursor: pointer;
+  margin: 10px;
+  padding: 5px;
+}
+
+.moviebox {
+  display: flex;
+  justify-content: center;
+}
+

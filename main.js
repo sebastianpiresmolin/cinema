@@ -46,6 +46,7 @@ class MovieCard {
     // Create a container div for each movie card
     var movieContainer = document.createElement("div");
     movieContainer.className = "movie-card";
+    movieContainer.id = this.movie.id.toString();
 
     // Create image element
     var image = document.createElement("img");
@@ -75,8 +76,8 @@ class MovieCard {
     movieContainer.appendChild(genre);
     movieContainer.appendChild(description);
 
-    // Append the container to the body or another HTML element
-    document.body.appendChild(movieContainer);
+    var containerElement = document.getElementById("movieContainer");
+    containerElement.appendChild(movieContainer);
   }
 }
 
@@ -88,3 +89,31 @@ window.onload = function () {
     movieCard.createCard();
   }
 };
+
+const scrollContainer = document.getElementById('scroll-container');
+let currentPosition = 0;
+
+function showMovies() {
+    const movieCards = document.querySelectorAll('.movie-card');
+    movieCards.forEach((card, index) => {
+        card.style.display = index >= currentPosition && index < currentPosition + 4 ? 'inline-block' : 'none';
+    });
+}
+
+function prevMovies() {
+    if (currentPosition > 0) {
+        currentPosition -= 1;
+        showMovies();
+    }
+}
+
+function nextMovies() {
+    const movieCards = document.querySelectorAll('.movie-card');
+    if (currentPosition < movieCards.length - 4) {
+        currentPosition += 1;
+        showMovies();
+    }
+}
+
+// Initial display
+showMovies();
