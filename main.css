@@ -244,4 +244,83 @@ nav {
   margin-top: 1.2vh;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+footer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+footer ul li {
+  list-style: none;
+}
+footer .footerSections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media only screen and (max-width: 500px) {
+  footer {
+    /* Dropdown Button */
+    /* The container <div> - needed to position the dropdown content */
+    /* Dropdown Content (Hidden by Default) */
+    /* Links inside the dropdown */
+    /* Change color of dropdown links on hover */
+    /* Show the dropdown menu on hover */
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+  }
+  footer #footerDesktop {
+    display: none;
+  }
+  footer .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    display: grid;
+    margin: 20px 20px;
+  }
+  footer .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  footer .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  footer .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  footer .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  footer .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  footer .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+}
+@media only screen and (min-width: 500px) {
+  footer .dropdown {
+    display: none;
+  }
+  footer #footerDesktop {
+    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  footer #footerDesktop a {
+    display: grid;
+    color: black;
+    text-decoration: none;
+  }
+}/*# sourceMappingURL=main.css.map */
+
 }/*# sourceMappingURL=main.css.map */
