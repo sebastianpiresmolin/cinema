@@ -33,3 +33,72 @@ inputElement.addEventListener("keyup", function (event) {
 });
 
 //--- Search Box ---//
+
+
+//--- Movie Card ---//
+
+class MovieCard {
+  constructor(movie) {
+    this.movie = movie;
+  }
+
+  createCard(containerId) {
+    // Create a container div for each movie card
+    var movieContainer = document.createElement("div");
+    movieContainer.className = "movie-card";
+    movieContainer.id = this.movie.id.toString();
+
+    // Create image element
+    var image = document.createElement("img");
+    image.src = this.movie.image;
+    image.alt = this.movie.title;
+
+    // Create title element
+    var title = document.createElement("h2");
+    title.textContent = this.movie.title;
+
+    // Create date element
+    var date = document.createElement("p");
+    date.textContent = "Release Date: " + this.movie.date;
+
+    // Create genre element
+    var genre = document.createElement("p");
+    genre.textContent = "Genre: " + this.movie.genre;
+
+    // Create description element
+    var description = document.createElement("p");
+    description.textContent = this.movie.description;
+
+    // Append elements to the container
+    movieContainer.appendChild(image);
+    movieContainer.appendChild(title);
+    movieContainer.appendChild(date);
+    movieContainer.appendChild(genre);
+    movieContainer.appendChild(description);
+
+    var containerElement = document.getElementById(containerId);
+    if (containerElement) {
+      containerElement.appendChild(movieContainer);
+
+      // Correct placement of the if statement
+      if ([6, 7, 8, 9, 10, 11, 12].includes(this.movie.id)) {
+        movieContainer.classList.add("hidden-movie");
+      }
+    } else {
+      console.error(`Container with ID '${containerId}' not found.`);
+    }
+  }
+}
+
+// ...
+
+window.onload = function () {
+  const containerIds = ['movieContainer1', 'movieContainer2', 'movieContainer3'];
+  for (const containerId of containerIds) {
+    for (var i = 0; i < movies.length; i++) {
+      var movieCard = new MovieCard(movies[i]);
+      movieCard.createCard(containerId);
+    }
+  }
+};
+
