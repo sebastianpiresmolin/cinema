@@ -191,6 +191,10 @@ nav {
   cursor: pointer;
 }
 
+footer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 footer ul li {
   list-style: none;
 }
@@ -218,6 +222,7 @@ footer .footerSections {
     font-size: 16px;
     border: none;
     display: grid;
+    margin: 20px 20px;
   }
   footer .dropdown {
     position: relative;
@@ -258,5 +263,7 @@ footer .footerSections {
   }
   footer #footerDesktop a {
     display: grid;
+    color: black;
+    text-decoration: none;
   }
 }/*# sourceMappingURL=main.css.map */
