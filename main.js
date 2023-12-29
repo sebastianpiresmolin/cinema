@@ -81,7 +81,7 @@ class MovieCard {
       containerElement.appendChild(movieContainer);
 
       // Correct placement of the if statement
-      if ([5, 6, 7, 8, 9, 10, 11, 12].includes(this.movie.id)) {
+      if ([6, 7, 8, 9, 10, 11, 12].includes(this.movie.id)) {
         movieContainer.classList.add("hidden-movie");
       }
     } else {
