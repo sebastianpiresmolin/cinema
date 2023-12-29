@@ -120,6 +120,42 @@ nav {
     }
   }
 }
+.nav__links2 ul{
+  display:flex;
+  margin-left: 1vw;
+  list-style:none;
+  
+}
+.nav__links2 li{
+  margin-left: 3vw;
+  font-size: 1em;
+  
+}
+.nav__links2 a{
+  color:$green;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: 500;
+  &:hover{color:$black}
+  &:visited{color:#274c77}
+}
+  @media (max-width: 400px){
+   .nav__links2 ul {
+    display:block;
+   }}
+.About-content{
+  margin: 7vw 7vw;
+}
+.About-content, .About-content p{
+ padding-top:2vw;
+ padding-bottom: 2vw;
+ 
+}
+.About-content { h1 ,h2,h3,h4,h5
+  {font-size: 3em;}
+  
+  p {font-size: 2em;}
+}
 
 .nav__map {
   width: fit-content;
