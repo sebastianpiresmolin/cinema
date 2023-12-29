@@ -42,7 +42,7 @@ class MovieCard {
     this.movie = movie;
   }
 
-  createCard() {
+  createCard(containerId) {
     // Create a container div for each movie card
     var movieContainer = document.createElement("div");
     movieContainer.className = "movie-card";
@@ -76,49 +76,30 @@ class MovieCard {
     movieContainer.appendChild(genre);
     movieContainer.appendChild(description);
 
-    var containerElement = document.getElementById("movieContainer");
-    containerElement.appendChild(movieContainer);
+    var containerElement = document.getElementById(containerId);
+    if (containerElement) {
+      containerElement.appendChild(movieContainer);
 
-    if ([5, 6, 7, 8, 9, 10, 11, 12].includes(this.movie.id)) {
-      movieContainer.classList.add("hidden-movie");
+      // Correct placement of the if statement
+      if ([5, 6, 7, 8, 9, 10, 11, 12].includes(this.movie.id)) {
+        movieContainer.classList.add("hidden-movie");
+      }
+    } else {
+      console.error(`Container with ID '${containerId}' not found.`);
     }
   }
 }
 
+// ...
 
 window.onload = function () {
-  for (var i = 0; i < movies.length; i++) {
-    var movieCard = new MovieCard(movies[i]);
-    movieCard.createCard();
+  // Assuming movies array is defined in data.js
+  const containerIds = ['movieContainer1', 'movieContainer2', 'movieContainer3', 'movieContainer4'];
+  for (const containerId of containerIds) {
+    for (var i = 0; i < movies.length; i++) {
+      var movieCard = new MovieCard(movies[i]);
+      movieCard.createCard(containerId);
+    }
   }
 };
 
-//--- Movie Scroll ---//
-
-const scrollContainer = document.getElementById('scroll-container');
-let currentPosition = 0;
-
-function showMovies() {
-    const movieCards = document.querySelectorAll('.movie-card');
-    movieCards.forEach((card, index) => {
-        card.style.display = index >= currentPosition && index < currentPosition + 4 ? 'inline-block' : 'none';
-    });
-}
-
-function prevMovies() {
-    if (currentPosition > 0) {
-        currentPosition -= 4;
-        showMovies();
-    }
-}
-
-function nextMovies() {
-    const movieCards = document.querySelectorAll('.movie-card');
-    if (currentPosition < movieCards.length - 4) {
-        currentPosition += 4;
-        showMovies();
-    }
-}
-
-
-showMovies();

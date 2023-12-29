@@ -197,30 +197,29 @@ nav {
 
 
 /* Movie CARDS CSS  */
-#movieContainer {
+
+
+.movieContainer {
   display: flex;
-  overflow: hidden;
-  border: 1px solid #ddd;
-  gap: 10px;
-}
-
-
-
-.navigation-button {
-  cursor: pointer;
-  margin: 10px;
-  padding: 5px;
-}
-
-.movie__wrapper {
-  display: flex;
+  flex-direction: row;
+  overflow-x: auto; /* Optional: Add horizontal scrolling for small screens */
   justify-content: center;
+}
 
+.movie-card {
+  flex: 0 0 auto; /* Allow the cards to grow and shrink as needed */
+  background-color: #fff;
+
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  margin-right: 20px; /* Add margin between cards */
 }
 
 .movie-card p {
   display: none;
 }
+
 .movie-card img{
   width: 196px;
   height: auto;
@@ -229,23 +228,24 @@ nav {
 
 .movie-card h2 {
   margin-top: 0.5rem;
-    font-size: 1rem;
-    line-height: .875rem;
-    min-height: 1.75rem;
-    opacity: .7;
-    white-space: normal;
-    max-height: 1.75rem;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    max-width: 196px;
-}
-
-#Topplista_h1 {
-  align-items: center;
+  font-size: 1rem;
+  line-height: .875rem;
+  min-height: 1.75rem;
+  opacity: .7;
+  white-space: normal;
+  max-height: 1.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-width: 196px;
 }
 
 .hidden-movie {
   display: none;
+}
+
+.movie__headers {
+  display: flex;
+  justify-content: center;
 }
