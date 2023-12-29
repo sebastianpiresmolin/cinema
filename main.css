@@ -209,11 +209,9 @@ nav {
 .movie-card {
   flex: 0 0 auto; /* Allow the cards to grow and shrink as needed */
   background-color: #fff;
-
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
   transition: transform 0.3s ease-in-out;
-  margin-right: 20px; /* Add margin between cards */
 }
 
 .movie-card p {
@@ -223,7 +221,7 @@ nav {
 .movie-card img{
   width: 196px;
   height: auto;
-  gap: 10%;
+
 }
 
 .movie-card h2 {
