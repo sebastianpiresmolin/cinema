@@ -20,16 +20,18 @@ html {
   font-size: 12px;
   margin: 0;
   overflow-x: hidden;
+  background-color: #000;
 }
 
 nav {
+  z-index: 4;
   width: 100vw;
   height: 6vh;
   min-height: 6vh;
   background-color: #0b712f;
   display: flex;
   align-items: center;
-  position: sticky;
+  position: absolute;
   top: 0;
 }
 
@@ -146,12 +148,17 @@ nav {
   margin: 7vw 7vw;
 }
 
-.About-content, .About-content p {
+.About-content,
+.About-content p {
   padding-top: 2vw;
   padding-bottom: 2vw;
 }
 
-.About-content h1, .About-content h2, .About-content h3, .About-content h4, .About-content h5 {
+.About-content h1,
+.About-content h2,
+.About-content h3,
+.About-content h4,
+.About-content h5 {
   font-size: 3em;
 }
 .About-content p {
@@ -286,6 +293,87 @@ nav {
   max-width: 196px;
 }
 
+#infoboxFirstImg {
+  display: none;
+}
+@media (min-width: 700px) {
+  #infoboxFirstImg {
+    display: flex;
+  }
+}
+
+#infoboxLastP {
+  display: flex;
+}
+@media (min-width: 700px) {
+  #infoboxLastP {
+    display: none;
+  }
+}
+
+#infoboxHiddenP {
+  display: none;
+}
+@media (min-width: 700px) {
+  #infoboxHiddenP {
+    display: flex;
+  }
+}
+
+.infobox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+}
+@media (min-width: 700px) {
+  .infobox {
+    flex-direction: row;
+  }
+}
+.infobox p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 1.2rem;
+  margin: 0;
+  color: #fff;
+  max-width: 500px;
+}
+@media (min-width: 700px) {
+  .infobox p {
+    max-width: 40vw;
+  }
+}
+@media (min-width: 850px) {
+  .infobox p {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1240px) {
+  .infobox p {
+    max-width: 500px;
+  }
+}
+.infobox img {
+  max-width: 90vw;
+}
+@media (min-width: 700px) {
+  .infobox img {
+    max-width: 40vw;
+  }
+}
+@media (min-width: 1240px) {
+  .infobox img {
+    max-width: 500px;
+  }
+}
+
 .hidden-movie {
   display: none;
 }
@@ -320,7 +408,7 @@ footer .footerSections {
     display: none;
   }
   footer .dropbtn {
-    background-color: #04AA6D;
+    background-color: #04aa6d;
     color: white;
     padding: 16px;
     font-size: 16px;
