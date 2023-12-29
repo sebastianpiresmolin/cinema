@@ -1,3 +1,13 @@
+
+.filmAdvertising {
+  color: red;
+}
+.filmAdvertising h2 {
+  transform: translateY(-60px);
+}
+.filmAdvertising h3 {
+  transform: translateY(-70px);
+}
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -266,4 +276,6 @@ footer .footerSections {
     color: black;
     text-decoration: none;
   }
+}/*# sourceMappingURL=main.css.map */
+
 }/*# sourceMappingURL=main.css.map */
