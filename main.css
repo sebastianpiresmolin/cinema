@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .filmAdvertising {
   color: red;
 }
@@ -222,14 +223,14 @@ nav {
 
 .filterContainer button {
   display: block;
-  border-color: #e3170a;
+  border-color: blueviolet;
   border-style: solid;
   border-radius: 4px;
-  width: 180px;
-  height: 50px;
+  width: 80px;
+  height: 30px;
   background-color: #ffffff;
-  font-size: 20px;
-  color: #e3170a;
+  font-size: 14px;
+  color: black;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   text-align: center;
@@ -640,4 +641,13 @@ input:focus {
 
 .filterInputBox input::placeholder {
   color: #e3170a;
-} /*# sourceMappingURL=main.css.map */
+} 
+/* Visas nu och Kommande filmer knappar på movies.html */
+.purpleBtnsFilter {
+  background-color: blueviolet;
+  color: #fff;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 5px;
+  margin: 10px;
+}/*# sourceMappingURL=main.css.map */
