@@ -112,6 +112,51 @@ nav {
   color: #0e0f0f;
 }
 
+.nav__links2 ul {
+  display: flex;
+  margin-left: 1vw;
+  list-style: none;
+}
+
+.nav__links2 li {
+  margin-left: 3vw;
+  font-size: 1em;
+}
+
+.nav__links2 a {
+  color: #0b712f;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: 500;
+}
+.nav__links2 a:hover {
+  color: #000;
+}
+.nav__links2 a:visited {
+  color: #274c77;
+}
+
+@media (max-width: 400px) {
+  .nav__links2 ul {
+    display: block;
+  }
+}
+.About-content {
+  margin: 7vw 7vw;
+}
+
+.About-content, .About-content p {
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+
+.About-content h1, .About-content h2, .About-content h3, .About-content h4, .About-content h5 {
+  font-size: 3em;
+}
+.About-content p {
+  font-size: 2em;
+}
+
 .nav__map {
   width: -moz-fit-content;
   width: fit-content;
