@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 .filmAdvertising {
   color: red;
 }
@@ -21,6 +20,7 @@ html {
   height: 100vh;
   font-size: 12px;
   margin: 0;
+  overflow-x: hidden;
 }
 
 nav {
@@ -696,7 +696,8 @@ input:focus {
   padding: 8px 25px;
   border-radius: 5px;
   margin: 10px;
-=======
+}
+
 .movieContainer {
   display: flex;
   flex-direction: row;
