@@ -93,8 +93,7 @@ class MovieCard {
 // ...
 
 window.onload = function () {
-  // Assuming movies array is defined in data.js
-  const containerIds = ['movieContainer1', 'movieContainer2', 'movieContainer3', 'movieContainer4'];
+  const containerIds = ['movieContainer1', 'movieContainer2', 'movieContainer3'];
   for (const containerId of containerIds) {
     for (var i = 0; i < movies.length; i++) {
       var movieCard = new MovieCard(movies[i]);
