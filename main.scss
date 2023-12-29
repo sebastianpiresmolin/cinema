@@ -250,10 +250,15 @@ footer{
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
 }
 @media only screen and (min-width: 500px) {
-  
+  .dropdown{
+    display: none;
+  }
 #footerDesktop{
 display: block;
 display: grid;
 grid-template-columns: 1fr 1fr;
+}
+#footerDesktop a{
+  display: grid;
 }
 }}

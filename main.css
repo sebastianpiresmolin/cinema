@@ -248,9 +248,15 @@ footer .footerSections {
   }
 }
 @media only screen and (min-width: 500px) {
+  footer .dropdown {
+    display: none;
+  }
   footer #footerDesktop {
     display: block;
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  footer #footerDesktop a {
+    display: grid;
   }
 }/*# sourceMappingURL=main.css.map */
