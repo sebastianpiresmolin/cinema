@@ -825,4 +825,10 @@ footer .footerSections {
     text-decoration: none;
     margin-bottom: 5px;
   }
+}
+
+/* Modal styling*/
+.formDiv {
+  padding-left: 6rem;
+  padding-top: 4rem;
 }/*# sourceMappingURL=main.css.map */
