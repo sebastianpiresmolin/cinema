@@ -7,6 +7,26 @@
     <script src="main.js"></script>
     <link rel="stylesheet" href="main.css" />
   </head>
+  <nav>
+    <div onclick="showNave__hamburger()" class="nav__hamburger" id="grid-box">
+      <input type="checkbox" id="checkbox" class="checkbox hidden" />
+      <label for="checkbox">
+        <div class="hamburger">
+          <div class="bar bar1" onclick="toggleNave__hamburger()"></div>
+          <div class="bar bar2" onclick="toggleNave__hamburger()"></div>
+          <div class="bar bar3" onclick="toggleNave__hamburger()"></div>
+        </div>
+      </label>
+    </div>
+    <div class="nav__links-hamburger">
+      <ul>
+        <li><a href="about.html">Biljetter</a></li>
+        <li><a href="news.html">Nyheter</a></li>
+        <li><a href="movies.html">Film och trailers</a></li>
+        <li><a href="about.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
   <main>
     <h1>Frågor och Svar</h1>
 

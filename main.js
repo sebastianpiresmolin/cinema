@@ -33,3 +33,30 @@ inputElement.addEventListener("keyup", function (event) {
 });
 
 //--- Search Box ---//
+
+/*Hamburger-show*/
+function toggleNave__hamburger() {
+  const hamburger = document.querySelector(".nav__links-hamburger");
+  const hamburgerImg = document.querySelector(".everything-box");
+
+  hamburger.style.display =
+    hamburger.style.display === "flex" ? "none" : "flex";
+  hamburgerImg.style.display =
+    hamburgerImg.style.display === "none"
+      ? "flex"
+      : "none"; /*hide the img when hamburger menu is clicked*/
+}
+
+/*toggle show/close video*/
+
+let playVideo = document.querySelector(".play-button");
+let videoPopup = document.querySelector(".clip");
+let hideVideo = document.querySelector(".bi-x-lg");
+
+playVideo.onclick = function () {
+  videoPopup.classList.toggle("clip");
+};
+
+hideVideo.onclick = function () {
+  videoPopup.classList.toggle("clip");
+};

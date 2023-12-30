@@ -17,8 +17,23 @@
 
 <header>
   <nav>
-    <div class="nav__hamburger">
-      <i class="fas fa-bars"></i>
+    <div onclick="showNave__hamburger()" class="nav__hamburger" id="grid-box">
+      <input type="checkbox" id="checkbox" class="checkbox hidden" />
+      <label for="checkbox">
+        <div class="hamburger">
+          <div class="bar bar1" onclick="toggleNave__hamburger()"></div>
+          <div class="bar bar2" onclick="toggleNave__hamburger()"></div>
+          <div class="bar bar3" onclick="toggleNave__hamburger()"></div>
+        </div>
+      </label>
+    </div>
+    <div class="nav__links-hamburger">
+      <ul>
+        <li><a href="about.html">Biljetter</a></li>
+        <li><a href="news.html">Nyheter</a></li>
+        <li><a href="movies.html">Film och trailers</a></li>
+        <li><a href="about.html">Kontakt</a></li>
+      </ul>
     </div>
     <div class="nav__homepage">
       <a href="index.html"><i class="fa-regular fa-square"></i></a>
@@ -45,15 +60,35 @@
       </div>
     </div>
   </nav>
-  <iframe src="" frameborder="0"></iframe>
 </header>
+<div class="everything-box">
+  <div class="img-box">
+    <img class="everything-box-img"
+      src="https://catalog.cinema-api.com/cf/images/ncg-images/df705f0dcda848d4ac6b1b2308cb6390.jpg"
+      alt="Ett sista race poster" width="100%" height="100%">
 
+    <div class="text-div">
+      <p>På bio nu</p>
+      <a href="movies.html">Ett sista race</a>
+      <!--Needs the right refernse example https://www.filmstaden.se/film/NCG273278/ett-sista-race -->
+      <div class="play-button" id="play-button">
+      </div>
+      <div class="container">
+        <div class="clip">
+          <div class="close-btn"><i class="bi bi-x-lg">X</i></div>
+          <iframe id="iframe" width="100%" height="100%"
+            src="ETT SISTA RACE - Officiell Trailer - Biopremiär på juldagen!.mp4" autoplay=0 allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <main>
   <!----------------------------TOPPLISTA START --------------------------->
 
 
-    <!----------------------------FILMREKLAM START -------------------------->
-    <article class="filmAdvertising" align="center">
+  <!----------------------------FILMREKLAM START -------------------------->
+  <!--<article class="filmAdvertising" align="center">
       <iframe
         width="1000"
         height="315"
@@ -65,8 +100,8 @@
       ></iframe>
       <h2>Hammarskjöld</h2>
       <h3>Premiär 25 december</h3>
-    </article>
-    <!----------------------------FILMREKLAM END ---------------------------->
+    </article>-->
+  <!----------------------------FILMREKLAM END ---------------------------->
 
   <!----------------------------TOPPLISTA END ----------------------------->
 

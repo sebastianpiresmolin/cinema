@@ -10,14 +10,17 @@
   <main>
     <!----------------------------NAVBAR FOR ABOUT PAGE START --------------------------->
     <nav>
-      <div class="nav__hamburger">
-        <i class="fas fa-bars"></i>
+      <div onclick="showNave__hamburger()" class="nav__hamburger" id="grid-box">
+        <input type="checkbox" id="checkbox" class="checkbox hidden" />
+        <label for="checkbox">
+          <div class="hamburger">
+            <div class="bar bar1" onclick="toggleNave__hamburger()"></div>
+            <div class="bar bar2" onclick="toggleNave__hamburger()"></div>
+            <div class="bar bar3" onclick="toggleNave__hamburger()"></div>
+          </div>
+        </label>
       </div>
-      <div class="nav__homepage">
-        <a href="index.html"><i class="fa-regular fa-square"></i></a>
-      </div>
-      <!-- These links need anchors to the correct parts of about.html-->
-      <div class="nav__links">
+      <div class="nav__links-hamburger">
         <ul>
           <li><a href="about.html">Biljetter</a></li>
           <li><a href="news.html">Nyheter</a></li>
@@ -25,16 +28,22 @@
           <li><a href="about.html">Kontakt</a></li>
         </ul>
       </div>
+      <!--<div class="nav__hamburger">
+        <i class="fas fa-bars"></i>
+      </div>-->
       <!-- nav__map needs to be modied to link directly to the anchor point
       that is displaying the map on about.html -->
-      <div class="nav__map"><a href="about.html"><i class="fa-solid fa-location-dot"></i></a>
+      <div class="nav__map">
+        <a href="about.html"><i class="fa-solid fa-location-dot"></i></a>
       </div>
-      <div class="nav__searchbar"><i id="navsearch" class="fa-solid fa-magnifying-glass"></i>
+      <div class="nav__searchbar">
+        <i id="navsearch" class="fa-solid fa-magnifying-glass"></i>
       </div>
       <!-- the serachbox content need to be added to filter upon entering -->
       <div id="searchbox" class="searchbox__container">
         <input type="text" placeholder="Sök efter filmer..." />
-        <div id="closeInput" class="closeInput"><i class="fa-solid fa-x"></i>
+        <div id="closeInput" class="closeInput">
+          <i class="fa-solid fa-x"></i>
         </div>
       </div>
     </nav>
