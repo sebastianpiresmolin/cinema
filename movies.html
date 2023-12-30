@@ -54,12 +54,92 @@
     </nav>
     <h1></h1>
     <!----------------------------FILTER START --------------------------->
+    <button class="purpleBtnsFilter">Visas nu</button> 
+<button class="purpleBtnsFilter">Kommande filmer</button> 
+    <div class="filterContainer">
+      <h1>Filmer</h1>
+      <button class="filterButton" id="filterButton">Visa filter</button>
+      <div class="filterWindow" id="filterWindow">
+        <h2>Filtrera filmer</h2>
+        <span class="closeFilter"><i class="fa-solid fa-x" id="closeFilter"></i></span>
+        <h3>Typ</h3>
+        <h3>Rating</h3>
+        <h3 class="byTags">Genre</h3>
+        <ul class="filterBytype">
+          <li><input type="checkbox" checked id="visasNu">Visas nu</li>
+          <li><input type="checkbox" checked id="kommandeFilmer">Kommande filmer</li>
+        </ul>
+
+        <div class="filterButtonBox">
+          <h3>Genre</h3>
+          <div class="filterTags">
+            <label id="familj">Familj</label>
+            <label id="äventyr">Äventyr</label>
+            <label id="komedi">Komedi</label>
+            <label id="fantasy">Fantasy</label>
+            <label id="drama">Drama</label>
+            <label id="animerat">Animerat</label>
+            <label id="biografi">Biografi</label>
+            <label id="action">Action</label>
+            <label id="anime">Anime</label>
+            <label id="musikal">Musikal</label>
+            <label id="skräck">Skräck</label>
+          </div>
+        </div>
+        <div class="filterInputBox">
+          <h3 id="filterInputBox__title">Eller skriv för att söka på film</h3>
+          <input type="text" placeholder="Start typing to filter" id="searchBox">
+        </div>
+      </div>
+    </div>
+    <section>
     <!----------------------------FILTER END --------------------------->
 
     <!----------------------------CARDS START --------------------------->
     <!----------------------------CARDS END --------------------------->
 
     <!----------------------------FILMREKLAM START --------------------------->
+    <article class="filmAdvertising" align="center">
+      <iframe
+        width="1000"
+        height="315"
+        src="https://www.youtube.com/embed/tkk0c-Q_amc?si=Z-UXpI3FqTjiVQ-g&amp;controls=0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      <h2>Ett sista race</h2>
+      <h3>Premiär 5 januari</h3>
+    </article>
     <!----------------------------FILMREKLAM END--------------------------->
   </main>
+<!--FOOTER START-->
+<footer>
+  <div class="dropdown footerSections">
+    <button class="dropbtn">Gäster & Hjälp</button>
+    <div class="dropdown-content">
+      <a href="movies.html">Filmer</a>
+      <a href="news.html">Nyheter</a>
+      <a href="about.html">Om oss</a>
+      <a href="about.html">Kontakt</a>
+      <a href="QandA.html">Frågor och Svar</a>
+    </div>
+  </div>
+  <div id="footerDesktop">
+    <section>
+      <h4>Gäster</h4>
+      <a href="movies.html">Filmer</a>
+      <a href="news.html">Nyheter</a>
+      <a href="age-limit.html">Åldergränser</a>
+    </section>
+    <section>
+      <h4>Hjälp och Kontakt</h4>
+      <a href="about.html">Om oss</a>
+      <a href="about.html">Kontakt</a>
+      <a href="QandA.html">Frågor och Svar</a>
+    </section>
+  </div>
+</footer>
 </html>
+
