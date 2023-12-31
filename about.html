@@ -71,23 +71,16 @@
 <!--Temporary modal button-->
 <div class="formDiv">
   <form id="contact-form">
-    <div class="name">
-      <input type="hidden" name="contact_number">
-      <label class="user__name">Name</label>
-      <input type="text" name="user_name">
-    </div>
-    <div class="email">
-      <label class="user__email">Email</label>
-      <input id="email" type="email" name="user_email">
-    </div>
-    <div class="textarea">
-      <label class="message">Message</label>
-      <textarea id="message" name="message"></textarea>
-    </div>
-    <div id="modal__button">
-      <input class="modal__button" type="submit" value="Send">
-    </div>
+    <input type="hidden" name="contact_number">
+    <label>Name</label>
+    <input type="text" name="user_name">
+    <label>Email</label>
+    <input id="email" type="email" name="user_email">
+    <label>Message</label>
+    <textarea name="message"></textarea>
+    <input type="submit" value="Send">
   </form>
+  <p id="result"></p>
 </div>
 
 

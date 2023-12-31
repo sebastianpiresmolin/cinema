@@ -34,7 +34,6 @@ inputElement.addEventListener("keyup", function (event) {
 
 //--- Search Box ---//
 
-
 //--- Movie Card ---//
 
 class MovieCard {
@@ -93,7 +92,11 @@ class MovieCard {
 // ...
 
 window.onload = function () {
-  const containerIds = ['movieContainer1', 'movieContainer2', 'movieContainer3'];
+  const containerIds = [
+    "movieContainer1",
+    "movieContainer2",
+    "movieContainer3",
+  ];
   for (const containerId of containerIds) {
     for (var i = 0; i < movies.length; i++) {
       var movieCard = new MovieCard(movies[i]);
@@ -102,3 +105,22 @@ window.onload = function () {
   }
 };
 
+(function () {
+  // https://dashboard.emailjs.com/admin/account
+  emailjs.init("GPSeC8rGnNOyljaGF");
+})();
+
+window.onload = function() {
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // generate a five digit number for the contact_number variable
+      this.contact_number.value = Math.random() * 100000 | 0;
+      // these IDs from the previous steps
+      emailjs.sendForm('service_7rijg9p', 'template_xcfxa6a', this)
+          .then(function() {
+              console.log('SUCCESS!');
+          }, function(error) {
+              console.log('FAILED...', error);
+          });
+  });
+};
