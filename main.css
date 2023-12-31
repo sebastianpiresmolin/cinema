@@ -265,15 +265,15 @@ nav {
     margin-right: 8vw;
   }
 }
-.nav__homepage i {
+.nav__homepage img {
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  width: 1.5rem;
   cursor: pointer;
 }
-.nav__homepage i:hover {
+.nav__homepage img:hover {
   color: #0e0f0f;
 }
 .nav__homepage a {
