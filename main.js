@@ -105,6 +105,7 @@ window.onload = function () {
   }
 };
 
+// Emailing functionality
 (function () {
   // https://dashboard.emailjs.com/admin/account
   emailjs.init("GPSeC8rGnNOyljaGF");
@@ -115,7 +116,7 @@ window.onload = function() {
       event.preventDefault();
       // generate a five digit number for the contact_number variable
       this.contact_number.value = Math.random() * 100000 | 0;
-      // these IDs from the previous steps
+      // emailJS ID's
       emailjs.sendForm('service_7rijg9p', 'template_bpwozvu', this)
           .then(function() {
               console.log('SUCCESS!');
