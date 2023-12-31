@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Filmer och Trailers</title>
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="main.css" />
-  </head>
-  <main>
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Tidaholms biohörna" />
+  <meta property="og:site_name" content="Tidaholms biohörna" />
+  <meta property="og:url" content="" />
+  <meta property="og:description" content="Tidaholms biohörna, where you can take a break from the reality and go
+      inside a dark room to enter a different and exciting world." />
+  <meta property="og:type" content="website" />
+  <!--Set color for the address bar-->
+  <meta name="theme-color" content="#0B712F" />
+  <title>Tidaholms biohörna</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <script src="main.js" defer></script>
+  <script src="data.js" defer></script>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<header>
     <nav>
-      <div class="nav__hamburger">
-        <i class="fas fa-bars"></i>
+      <div onclick="showNave__hamburger()" class="nav__hamburger" id="grid-box">
+        <input type="checkbox" id="checkbox" class="checkbox hidden" />
+        <label for="checkbox">
+          <div class="hamburger">
+            <div class="bar bar1" onclick="toggleNave__hamburger()"></div>
+            <div class="bar bar2" onclick="toggleNave__hamburger()"></div>
+            <div class="bar bar3" onclick="toggleNave__hamburger()"></div>
+          </div>
+        </label>
+      </div>
+      <div class="nav__links-hamburger">
+        <ul>
+          <li><a href="about.html">Biljetter</a></li>
+          <li><a href="news.html">Nyheter</a></li>
+          <li><a href="movies.html">Film och trailers</a></li>
+          <li><a href="about.html">Kontakt</a></li>
+        </ul>
       </div>
       <div class="nav__homepage">
-        <a href="index.html"><i class="fa-regular fa-square"></i></a>
+        <a href="index.html"><img src="media/navbaricon.png" alt=""></i></a>
       </div>
       <!-- These links need anchors to the correct parts of about.html-->
       <div class="nav__links">
@@ -36,48 +70,52 @@
         <div id="closeInput" class="closeInput"><i class="fa-solid fa-x"></i>
         </div>
       </div>
-    </nav>
-    <h1></h1>
-    <!----------------------------FILTER START --------------------------->
-    <button class="purpleBtnsFilter">Visas nu</button> 
-<button class="purpleBtnsFilter">Kommande filmer</button> 
-    <div class="filterContainer">
-      <h1>Filmer</h1>
-      <button class="filterButton" id="filterButton">Visa filter</button>
-      <div class="filterWindow" id="filterWindow">
-        <h2>Filtrera filmer</h2>
-        <span class="closeFilter"><i class="fa-solid fa-x" id="closeFilter"></i></span>
-        <h3>Typ</h3>
-        <h3>Rating</h3>
-        <h3 class="byTags">Genre</h3>
-        <ul class="filterBytype">
-          <li><input type="checkbox" checked id="visasNu">Visas nu</li>
-          <li><input type="checkbox" checked id="kommandeFilmer">Kommande filmer</li>
-        </ul>
+    </div>
+  </nav>
+  <iframe src="" frameborder="0"></iframe>
+</header>
+<main>
+  <h1></h1>
+  <!----------------------------FILTER START --------------------------->
+  <button class="purpleBtnsFilter">Visas nu</button>
+  <button class="purpleBtnsFilter">Kommande filmer</button>
+  <div class="filterContainer">
+    <h1>Filmer</h1>
+    <button class="filterButton" id="filterButton">Visa filter</button>
+    <div class="filterWindow" id="filterWindow">
+      <h2>Filtrera filmer</h2>
+      <span class="closeFilter"><i class="fa-solid fa-x" id="closeFilter"></i></span>
+      <h3>Typ</h3>
+      <h3>Rating</h3>
+      <h3 class="byTags">Genre</h3>
+      <ul class="filterBytype">
+        <li><input type="checkbox" checked id="visasNu">Visas nu</li>
+        <li><input type="checkbox" checked id="kommandeFilmer">Kommande filmer</li>
+      </ul>
 
-        <div class="filterButtonBox">
-          <h3>Genre</h3>
-          <div class="filterTags">
-            <label id="familj">Familj</label>
-            <label id="äventyr">Äventyr</label>
-            <label id="komedi">Komedi</label>
-            <label id="fantasy">Fantasy</label>
-            <label id="drama">Drama</label>
-            <label id="animerat">Animerat</label>
-            <label id="biografi">Biografi</label>
-            <label id="action">Action</label>
-            <label id="anime">Anime</label>
-            <label id="musikal">Musikal</label>
-            <label id="skräck">Skräck</label>
-          </div>
-        </div>
-        <div class="filterInputBox">
-          <h3 id="filterInputBox__title">Eller skriv för att söka på film</h3>
-          <input type="text" placeholder="Start typing to filter" id="searchBox">
+      <div class="filterButtonBox">
+        <h3>Genre</h3>
+        <div class="filterTags">
+          <label id="familj">Familj</label>
+          <label id="äventyr">Äventyr</label>
+          <label id="komedi">Komedi</label>
+          <label id="fantasy">Fantasy</label>
+          <label id="drama">Drama</label>
+          <label id="animerat">Animerat</label>
+          <label id="biografi">Biografi</label>
+          <label id="action">Action</label>
+          <label id="anime">Anime</label>
+          <label id="musikal">Musikal</label>
+          <label id="skräck">Skräck</label>
         </div>
       </div>
+      <div class="filterInputBox">
+        <h3 id="filterInputBox__title">Eller skriv för att söka på film</h3>
+        <input type="text" placeholder="Start typing to filter" id="searchBox">
+      </div>
     </div>
-    <section>
+  </div>
+  <section>
     <!----------------------------FILTER END --------------------------->
 
     <!----------------------------CARDS START --------------------------->
@@ -85,20 +123,16 @@
 
     <!----------------------------FILMREKLAM START --------------------------->
     <article class="filmAdvertising" align="center">
-      <iframe
-        width="1000"
-        height="315"
-        src="https://www.youtube.com/embed/tkk0c-Q_amc?si=Z-UXpI3FqTjiVQ-g&amp;controls=0"
-        title="YouTube video player"
+      <iframe width="1000" height="315"
+        src="https://www.youtube.com/embed/tkk0c-Q_amc?si=Z-UXpI3FqTjiVQ-g&amp;controls=0" title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
+        allowfullscreen></iframe>
       <h2>Ett sista race</h2>
       <h3>Premiär 5 januari</h3>
     </article>
     <!----------------------------FILMREKLAM END--------------------------->
-  </main>
+</main>
 <!--FOOTER START-->
 <footer>
   <div class="dropdown footerSections">
@@ -126,5 +160,5 @@
     </section>
   </div>
 </footer>
-</html>
 
+</html>
