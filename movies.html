@@ -28,8 +28,23 @@
 </head>
 <header>
     <nav>
-      <div class="nav__hamburger">
-        <i class="fas fa-bars"></i>
+      <div onclick="showNave__hamburger()" class="nav__hamburger" id="grid-box">
+        <input type="checkbox" id="checkbox" class="checkbox hidden" />
+        <label for="checkbox">
+          <div class="hamburger">
+            <div class="bar bar1" onclick="toggleNave__hamburger()"></div>
+            <div class="bar bar2" onclick="toggleNave__hamburger()"></div>
+            <div class="bar bar3" onclick="toggleNave__hamburger()"></div>
+          </div>
+        </label>
+      </div>
+      <div class="nav__links-hamburger">
+        <ul>
+          <li><a href="about.html">Biljetter</a></li>
+          <li><a href="news.html">Nyheter</a></li>
+          <li><a href="movies.html">Film och trailers</a></li>
+          <li><a href="about.html">Kontakt</a></li>
+        </ul>
       </div>
       <div class="nav__homepage">
         <a href="index.html"><img src="media/navbaricon.png" alt=""></i></a>
