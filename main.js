@@ -61,8 +61,6 @@ playVideo.onclick = function () {
 hideVideo.onclick = function () {
   videoPopup.classList.toggle("clip");
 };
-=======
-
 //--- Movie Card ---//
 
 class MovieCard {
