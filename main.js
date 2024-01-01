@@ -116,16 +116,28 @@ class MovieCard {
   }
 }
 
-// ...
-
 window.onload = function () {
-  const containerIds = ['movieContainer1', 'movieContainer2', 'movieContainer3'];
-  for (const containerId of containerIds) {
-    for (var i = 0; i < movies.length; i++) {
-      var movieCard = new MovieCard(movies[i]);
-      movieCard.createCard(containerId);
-    }
+  // Create movie cards for movieContainer1 using moviesnow
+  const containerId1 = 'movieContainer1';
+  for (var i = 0; i < moviesnow.length; i++) {
+    var movieCard = new MovieCard(moviesnow[i]);
+    movieCard.createCard(containerId1);
+  }
+
+  // Create movie cards for movieContainer2 using moviesupc
+  const containerId2 = 'movieContainer2';
+  for (var j = 0; j < moviesupc.length; j++) {
+    var movieCard2 = new MovieCard(moviesupc[j]);
+    movieCard2.createCard(containerId2);
+  }
+  
+  // Combine moviesnow and moviesupc into a new array
+  const allMovies = [...moviesnow, ...moviesupc];
+
+  // Create movie cards for the combined array
+  const combinedContainerId = 'combinedMovieContainer';
+  for (var k = 0; k < allMovies.length; k++) {
+    var combinedMovieCard = new MovieCard(allMovies[k]);
+    combinedMovieCard.createCard(combinedContainerId);
   }
 };
-
-
