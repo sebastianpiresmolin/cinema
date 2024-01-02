@@ -55,6 +55,7 @@ html {
   margin: 0;
   overflow-x: hidden;
   background-color: $black;
+  color: $white;
 }
 
 nav {
@@ -895,12 +896,21 @@ input:focus {
   justify-content: flex-start;
 }
 
+.movieContainerAll {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
 .movie-card {
   flex: 0 0 auto; /* Allow the cards to grow and shrink as needed */
   background-color: #fff;
   padding: 0.5rem;
   text-align: center;
   transition: transform 0.3s ease-in-out;
+  background-color: $black;
 }
 
 .movie-card p {
