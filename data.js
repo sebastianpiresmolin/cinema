@@ -1,4 +1,4 @@
-var movies = [
+var moviesnow = [
     {
         "id": 1,
         "title": "Wonka",
@@ -92,7 +92,35 @@ var movies = [
         "title": "Avgrunden",
         "image": "https://catalog.cinema-api.com/cf/images/ncg-images/5d3cb9d45ca841d8859bf76e7d736345.jpg?width=240&version=2669451910E42C1BB6C7201C92506CCC&format=webp",
         "date": "15 sep 2023",
-        "genre": "Hela Kiruna kommer troligen rasa, frågan är inte om utan när. När ett gruvras inträffar i Kiirunavaragruvan börjar en kapplöpning mot klockan. Säkerhetschefen Frigga (Tuva Novotny) är fast i gruvan och måste ta sig upp för att varna staden och rädda sin familj innan katastrofen är ett faktum.",
-        "description": "15 sep 2023", 
+        "genre": "Action",
+        "description": "Hela Kiruna kommer troligen rasa, frågan är inte om utan när. När ett gruvras inträffar i Kiirunavaragruvan börjar en kapplöpning mot klockan. Säkerhetschefen Frigga (Tuva Novotny) är fast i gruvan och måste ta sig upp för att varna staden och rädda sin familj innan katastrofen är ett faktum.", 
     },
 ];
+
+var moviesupc = [
+    {
+        "id": 1,
+        "title": "Uppror",
+        "image": "https://catalog.cinema-api.com/cf/images/ncg-images/b38e9f322993404a9cecd58b41670b26.jpg?width=240&version=0A917EC0BD9045F4A7669435A0E2CF85&format=webp",
+        "date": "6 feb 2024",
+        "genre": "Drama",
+        "description": "Det är 1725, och Isaburo Sasahara är landets skickligaste med svärdet. Men när hans son hamnar i trubbel med Isaburos godsherre och dennas före detta älskare, döms både Isaburo och sonen till att begå seppuku, samurajernas rituella självmord. Uppror är en berättelse om heder, föräderi, lönnmord och självmord, och vann kritikerpriset vid filmfestivalen i Venedig. En milsten i sin genre och en av Kobayashis främsta filmer.",
+    },
+    {
+        "id": 2,
+        "title": "They Live",
+        "image": "https://catalog.cinema-api.com/cf/images/ncg-images/e3c8e6664836414d9561cd23e3e9701e.jpg?width=240&version=928D924D962E81A0D7B0C915EA833CAE&format=webp",
+        "date": "9 jan 2024",
+        "genre": "Action,Scräck,Sci-Fi",
+        "description": "John Nada gör en skrämmande upptäckt dagen då han av misstag kommer över ett par märkliga solglasögon. När han tar på sig dem ser han hur vår värld ser ut på riktigt. Häpet beskådar han en stad belamrad av befallningar på gigantiska skyltar. LYD! TÄNK INTE! TITTA PÅ TV! KONSUMERA! Men mest skrämmande är att många av de människor han möter har förvrängda ansikten. De ser inte ut som vanligt folk. De ser inte ens ut att vara från denna värld…", 
+    },
+    {
+        "id": 3,
+        "title": "The Animal Kingdom",
+        "image": "https://catalog.cinema-api.com/cf/images/ncg-images/b9dd7a5152ae46c3b68a075337d21bcc.jpg?width=240&version=CEA46CBA57C4D620E1AE3035464928BB&format=webp",
+        "date": "12 jan 2024",
+        "genre": "Äventyr, Drama, Sci-Fi",
+        "description": "Allt fler människor börjar långsamt förvandlas till djur. De drabbade lider av mutationer som ger dem attribut från fåglar, lejon, björnar eller apor. Myndigheterna tvingar dem att lämna hem och familj. Mutanterna blir internerade på speciella kliniker. François gör allt för att rädda sin fru som drabbats av detta mystiska fenomen. När situationen blir värre driver det François och 16-årige sonen Émile att själva söka efter en lösning. En resa som för alltid kommer att förändra deras liv.", 
+    },
+];
+
