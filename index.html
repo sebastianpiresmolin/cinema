@@ -28,89 +28,51 @@
 <body>
 
 <!-- nav__map needs to be modied to link directly to the anchor point-->
-  <header>
-    <nav>
-      <div class="nav__hamburger">
-        <i class="fas fa-bars"></i>
-      </div>
-      <div class="nav__homepage">
-        <a href="index.html"><i class="fa-regular fa-square"></i></a>
-      </div>
-      <!-- These links need anchors to the correct parts of about.html-->
-      <div class="nav__links">
-        <ul>
-          <li><a href="about.html">Biljetter</a></li>
-          <li><a href="news.html">Nyheter</a></li>
-          <li><a href="movies.html">Film och trailers</a></li>
-          <li><a href="about.html">Kontakt</a></li>
-        </ul>
-      </div>
-      <!-- nav__map needs to be modied to link directly to the anchor point
-      that is displaying the map on about.html -->
-      <div class="nav__map">
-        <a href="about.html"><i class="fa-solid fa-location-dot"></i></a>
-      </div>
-      <div class="nav__searchbar">
-        <i id="navsearch" class="fa-solid fa-magnifying-glass"></i>
-      </div>
-      <!-- the serachbox content need to be added to filter upon entering -->
-      <div id="searchbox" class="searchbox__container">
-        <input type="text" placeholder="Sök efter filmer..." />
-        <div id="closeInput" class="closeInput">
-          <i class="fa-solid fa-x"></i>
+<header>
+  <nav>
+    <div onclick="showNave__hamburger()" class="nav__hamburger" id="grid-box">
+      <input type="checkbox" id="checkbox" class="checkbox hidden" />
+      <label for="checkbox">
+        <div class="hamburger">
+          <div class="bar bar1" onclick="toggleNave__hamburger()"></div>
+          <div class="bar bar2" onclick="toggleNave__hamburger()"></div>
+          <div class="bar bar3" onclick="toggleNave__hamburger()"></div>
         </div>
-      </div>
-    </nav>
-    <iframe src="" frameborder="0"></iframe>
-  </header>
-
-  <main>
-    <!----------------------------TOPPLISTA START --------------------------->
-    <h1 class="movie__headers">Topplistan</h1>
-    <div class="movie__wrapper">
-      <div id="movieContainer1" class="movieContainer"></div>
+      </label>
     </div>
-    <!----------------------------FILMREKLAM START -------------------------->
-    <article class="filmAdvertising" align="center">
-      <iframe width="1000" height="315"
-        src="https://www.youtube.com/embed/DCtjeTmJhYs?si=cbZ63StJYYydfSJU&amp;controls=0" title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-      <h2>Hammarskjöld</h2>
-      <h3>Premiär 25 december</h3>
-    </article>
-   
-    <div class="infobox">
-      <img id="infoboxFirstImg" class="infobox__img" src="media/torkel.jpg" alt="">
-      <p class="infobox__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit urna at
-        turpis iaculis, in dignissim dolor scelerisque. Aenean egestas nunc at ligula pharetra, ac consequat ligula
-        fringilla. Pellentesque sed dui nec libero aliquam tempor. </p>
-      <p id="infoboxHiddenP" class="infobox__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-        hendrerit urna at turpis iaculis, in dignissim dolor scelerisque. Aenean egestas nunc at ligula pharetra, ac
-        consequat ligula fringilla. Pellentesque sed dui nec libero aliquam tempor. </p>
-      <img class="infobox__img" src="media/pulpfiction.jpg" alt="">
-      <p id="infoboxLastP" class="infobox__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-        hendrerit urna at turpis iaculis, in dignissim dolor scelerisque. Aenean egestas nunc at ligula pharetra, ac
-        consequat ligula fringilla. Pellentesque sed dui nec libero aliquam tempor. </p>
+    <div class="nav__links-hamburger">
+      <ul>
+        <li><a href="about.html">Biljetter</a></li>
+        <li><a href="news.html">Nyheter</a></li>
+        <li><a href="movies.html">Film och trailers</a></li>
+        <li><a href="about.html">Kontakt</a></li>
+      </ul>
     </div>
-    <!----------------------------KOMMANDE START ----------------------------->
-    <h1 class="movie__headers">Kommande filmer</h1>
-    <div class="movie__wrapper">
-      <div id="movieContainer2" class="movieContainer"></div>
+    <div class="nav__homepage">
+      <a href="index.html"><img src="media/navbaricon.png" alt=""></i></a>
     </div>
-  
-  </main>
-  <!--FOOTER START-->
-  <footer>
-    <div class="dropdown footerSections">
-      <button class="dropbtn">Gäster & Hjälp</button>
-      <div class="dropdown-content">
-        <a href="movies.html">Filmer</a>
-        <a href="news.html">Nyheter</a>
-        <a href="about.html">Om oss</a>
-        <a href="about.html">Kontakt</a>
-        <a href="QandA.html">Frågor och Svar</a>
+    <!-- These links need anchors to the correct parts of about.html-->
+    <div class="nav__links">
+      <ul>
+        <li><a href="about.html">Biljetter</a></li>
+        <li><a href="news.html">Nyheter</a></li>
+        <li><a href="movies.html">Film och trailers</a></li>
+        <li><a href="about.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <!-- nav__map needs to be modied to link directly to the anchor point
+    that is displaying the map on about.html -->
+    <div class="nav__map">
+      <a href="about.html"><i class="fa-solid fa-location-dot"></i></a>
+    </div>
+    <div class="nav__searchbar">
+      <i id="navsearch" class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <!-- the serachbox content need to be added to filter upon entering -->
+    <div id="searchbox" class="searchbox__container">
+      <input type="text" placeholder="Sök efter filmer..." />
+      <div id="closeInput" class="closeInput">
+        <i class="fa-solid fa-x"></i>
       </div>
     </div>
   </nav>
@@ -143,7 +105,23 @@
   <div class="movie__wrapper">
     <div id="movieContainer1" class="movieContainer"></div>
   </div>
+  <!----------------------------PÅ BIO NU END --------------------------->
+  <!----------------------------FILMREKLAM START -------------------------->
+  <article class="filmAdvertising" align="center">
+    <iframe width="1000" height="315" src="https://www.youtube.com/embed/DCtjeTmJhYs?si=cbZ63StJYYydfSJU&amp;controls=0"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    <h2>Hammarskjöld</h2>
+    <h3>Premiär 25 december</h3>
+  </article>
+  <!----------------------------FILMREKLAM END ---------------------------->
 
+  <!----------------------------FILMREKLAM START -------------------------->
+
+  <!----------------------------FILMREKLAM END ---------------------------->
+
+  <!----------------------------KOMMANDE START ----------------------------->
   <h1 class="movie__headers">Kommande filmer</h1>
   <div class="movie__wrapper">
     <div id="movieContainer2" class="movieContainer"></div>
@@ -164,19 +142,6 @@
 </main>
 <!--FOOTER START-->
 <footer>
-     <div id="footerDesktop">
-      <section>
-        <h4>Gäster</h4>
-        <a href="movies.html">Filmer</a>
-        <a href="news.html">Nyheter</a>
-        <a href="age-limit.html">Åldergränser</a>
-      </section>
-      <section>
-        <h4>Hjälp och Kontakt</h4>
-        <a href="about.html">Om oss</a>
-        <a href="about.html">Kontakt</a>
-        <a href="QandA.html">Frågor och Svar</a>
-      </section>
   <div class="dropdown footerSections">
     <button class="dropbtn">Gäster & Hjälp</button>
     <div class="dropdown-content">
