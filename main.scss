@@ -853,11 +853,16 @@ input:focus {
   margin: 10px;
 }
 
+.movie__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .movieContainer {
   display: flex;
   flex-direction: row;
   overflow-x: auto; /* Optional: Add horizontal scrolling for small screens */
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .movie-card {
