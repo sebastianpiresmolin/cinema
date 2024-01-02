@@ -136,8 +136,6 @@ inputElement.addEventListener("keyup", function (event) {
   }
 });
 
-//--- Search Box ---//
-
 /*Hamburger-show*/
 function toggleNave__hamburger() {
   const hamburger = document.querySelector(".nav__links-hamburger");

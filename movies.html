@@ -18,6 +18,7 @@
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <script src="main.js" defer></script>
   <script src="data.js" defer></script>
+  <script src="filter.js" defer></script>
   <link rel="stylesheet" href="main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,12 +76,15 @@
   <iframe src="" frameborder="0"></iframe>
 </header>
 <main>
-  <h1></h1>
   <!----------------------------FILTER START --------------------------->
+  <ul class="filterBytype">
+    <li><input type="checkbox" checked id="moviesNowCheckbox">På bio nu</li>
+    <li><input type="checkbox" checked id="moviesUpcCheckbox">Kommande filmer</li>
+  </ul>
+  <!-- 
   <button class="purpleBtnsFilter">Visas nu</button>
   <button class="purpleBtnsFilter">Kommande filmer</button>
   <div class="filterContainer">
-    <h1>Filmer</h1>
     <button class="filterButton" id="filterButton">Visa filter</button>
     <div class="filterWindow" id="filterWindow">
       <h2>Filtrera filmer</h2>
@@ -114,11 +118,11 @@
         <input type="text" placeholder="Start typing to filter" id="searchBox">
       </div>
     </div>
-  </div>
+  </div>-->
     <!----------------------------FILTER END --------------------------->
 
     <!----------------------------CARDS START --------------------------->
-    <h1 class="movie__headers">Alla filmer</h1>
+    <h1 class="movie__headers">Filmer</h1>
     <div class="movie__wrapper">
       <div id="combinedMovieContainer" class="movieContainerAll"></div>
     </div>
