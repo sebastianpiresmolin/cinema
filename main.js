@@ -51,6 +51,8 @@ function getContainerIds() {
       return ["movieContainer1", "movieContainer2", "movieContainer3"];
     case "news.html":
       return ["movieContainer3"];
+    case "movies.html":
+      return ["movieContainer4"];
     default:
       return [];
   }
@@ -63,6 +65,8 @@ function getIdsToHide() {
       return [6, 7, 8, 9, 10, 11, 12];
     case "news.html":
       return [7, 8, 9, 10, 11, 12];
+    case "movies.html":
+      return [9, 10, 11, 12];
     default:
       return [];
   }
@@ -91,6 +95,8 @@ function getContainerIds() {
       return ["movieContainer1", "movieContainer2", "movieContainer3"];
     case "news.html":
       return ["movieContainer3"];
+      case "movies.html":
+        return ["movieContainer4"];
     default:
       return [];
   }
