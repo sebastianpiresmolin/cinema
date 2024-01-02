@@ -43,13 +43,36 @@ class MovieCard {
     if (containerElement) {
       containerElement.appendChild(movieContainer);
 
-      // Correct placement of the if statement
-      if ([6, 7, 8, 9, 10, 11, 12].includes(this.movie.id)) {
+      if (getIdsToHide().includes(this.movie.id)) {
         movieContainer.classList.add("hidden-movie");
       }
     } else {
       console.error(`Container with ID '${containerId}' not found.`);
     }
+  }
+}
+
+function getContainerIds() {
+  const currentPage = window.location.pathname.split("/").pop();
+  switch (currentPage) {
+    case "index.html":
+      return ["movieContainer1", "movieContainer2"];
+    case "movies.html":
+      return ["combinedMovieContainer"];
+    default:
+      return [];
+  }
+}
+
+function getIdsToHide() {
+  const currentPage = window.location.pathname.split("/").pop();
+  switch (currentPage) {
+    case "index.html":
+      return [6, 7, 8, 9, 10, 11, 12];
+    case "movies.html":
+      return [];
+    default:
+      return [];
   }
 }
 
@@ -67,7 +90,7 @@ window.onload = function () {
     var movieCard2 = new MovieCard(moviesupc[j]);
     movieCard2.createCard(containerId2);
   }
-  
+
   // Combine moviesnow and moviesupc into a new array
   const allMovies = [...moviesnow, ...moviesupc];
 
