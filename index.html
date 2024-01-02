@@ -15,8 +15,9 @@
   <meta name="theme-color" content="#0B712F" />
   <title>Tidaholms biohörna</title>
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <script src="main.js" defer></script>
   <script src="data.js" defer></script>
+  <script src="main.js" defer></script>
+  
   <link rel="stylesheet" href="main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -102,8 +103,10 @@
 <main>
   <!----------------------------TOPPLISTA START --------------------------->
   <h1 class="movie__headers">Topplistan</h1>
-  <div class="movie__wrapper">
-    <div id="movieContainer1" class="movieContainer"></div>
+  <div class="movie-scroll-container">
+    <div class="movie__wrapper">
+      <div id="movieContainer1" class="movieContainer"></div>
+    </div>
   </div>
   <!----------------------------FILMREKLAM START -------------------------->
   <article class="filmAdvertising" align="center">
@@ -128,9 +131,12 @@
 
   <!----------------------------KOMMANDE START ----------------------------->
   <h1 class="movie__headers">Kommande filmer</h1>
-  <div class="movie__wrapper">
-    <div id="movieContainer2" class="movieContainer"></div>
+  <div class="movie-scroll-container">
+    <div class="movie__wrapper">
+      <div id="movieContainer2" class="movieContainer"></div>
+    </div>
   </div>
+
   <!----------------------------KOMMANDE END ------------------------------->
 
   <!----------------------------TEXT IMAGE BOXES START ----------------------------->

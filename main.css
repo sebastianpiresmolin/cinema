@@ -896,19 +896,33 @@ input:focus {
   margin: 10px;
 }
 
+.movie-scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
 .movieContainer {
   display: flex;
   flex-direction: row;
   overflow-x: auto; /* Optional: Add horizontal scrolling for small screens */
   justify-content: center;
+  max-width: 100%;
+  margin: auto;
 }
 
 .movie-card {
-  flex: 0 0 auto; /* Allow the cards to grow and shrink as needed */
+  flex: 0 0 auto;
   background-color: #fff;
   padding: 0.5rem;
   text-align: center;
   transition: transform 0.3s ease-in-out;
+  max-width: 196px;
+}
+@media only screen and (max-width: 500px) {
+  .movie-card {
+    transform: translateX(calc((100vw - 100%) / 2));
+    margin-left: calc((100vw - 100%) / 2);
+  }
 }
 
 .movie-card p {
@@ -937,6 +951,21 @@ input:focus {
 
 .hidden-movie {
   display: none;
+}
+
+.movie-scroll-container,
+.movie__wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.movieContainer {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  justify-content: center;
+  max-width: 100%;
+  margin: auto;
 }
 
 .movie__headers {
