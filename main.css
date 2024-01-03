@@ -1238,4 +1238,37 @@ ul li {
   margin-left: 70px;
   margin-top: 45px;
   border-radius: 0.2rem;
+}
+
+/* Style for active buttons at movies.html */
+.filter-button.active {
+  background-color: #0b712f;
+  color: #fff;
+  border: 1px solid #0e0f0f;
+  padding-left: 25px;
+}
+
+/* Style for inactive buttons at movies.html */
+.filter-button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #0e0f0f;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Style for the checkmark only when the button is active */
+.filter-button.active .checkmark {
+  display: inline-block;
+}
+
+/* Style for the checkmark */
+.checkmark {
+  display: none; /* Initially hidden */
+  position: absolute;
+  left: 5px; /* Adjust the distance from the left */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px; /* Adjust the size of the checkmark */
 }/*# sourceMappingURL=main.css.map */

@@ -1,9 +1,9 @@
 //--- FilterByType ---//
 
-// Function to filter movies based on checkboxes
+// Function to filter movies based on buttons
 function filterMovies() {
-  const moviesNowCheckbox = document.getElementById("moviesNowCheckbox");
-  const moviesUpcCheckbox = document.getElementById("moviesUpcCheckbox");
+  const moviesNowButton = document.getElementById("moviesNowButton");
+  const moviesUpcButton = document.getElementById("moviesUpcButton");
 
   const containerIds = getContainerIds();
 
@@ -13,25 +13,25 @@ function filterMovies() {
       // Clear the container
       containerElement.innerHTML = "";
 
-      // Filter movies based on checkboxes
-      if (moviesNowCheckbox.checked) {
-        // Show movies from moviesnow if the checkbox is checked
+      // Filter movies based on buttons
+      if (moviesNowButton.classList.contains("active")) {
+        // Show movies from moviesnow if the button is active
         moviesnow.forEach((movie) => {
           var movieCard = new MovieCard(movie);
           movieCard.createCard(containerId);
         });
       }
 
-      if (moviesUpcCheckbox.checked) {
-        // Show upcoming movies from moviesupc if the checkbox is checked
+      if (moviesUpcButton.classList.contains("active")) {
+        // Show upcoming movies from moviesupc if the button is active
         moviesupc.forEach((movie) => {
           var movieCard = new MovieCard(movie);
           movieCard.createCard(containerId);
         });
       }
 
-      if (!moviesNowCheckbox.checked && !moviesUpcCheckbox.checked) {
-        // Show all movies when both checkboxes are unchecked
+      if (!moviesNowButton.classList.contains("active") && !moviesUpcButton.classList.contains("active")) {
+        // Show all movies when both buttons are inactive
         allMovies.forEach((movie) => {
           var movieCard = new MovieCard(movie);
           movieCard.createCard(containerId);
@@ -41,9 +41,22 @@ function filterMovies() {
   });
 }
 
-// Add event listeners to checkboxes
-document.getElementById("moviesNowCheckbox").addEventListener("change", filterMovies);
-document.getElementById("moviesUpcCheckbox").addEventListener("change", filterMovies);
+// Add event listeners to buttons
+document.getElementById("moviesNowButton").addEventListener("click", function () {
+  toggleButtonState("moviesNowButton");
+  filterMovies();
+});
+
+document.getElementById("moviesUpcButton").addEventListener("click", function () {
+  toggleButtonState("moviesUpcButton");
+  filterMovies();
+});
+
+// Function to toggle button state (active or inactive)
+function toggleButtonState(buttonId) {
+  const button = document.getElementById(buttonId);
+  button.classList.toggle("active");
+}
 
 window.onload = function () {
   // Initial movie card creation
