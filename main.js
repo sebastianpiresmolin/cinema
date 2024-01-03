@@ -156,7 +156,11 @@ window.onload = function () {
     }
   }
 
-  // Email functionality
+
+  (function () {
+    emailjs.init("GPSeC8rGnNOyljaGF");
+  })();
+  
   const form = document.getElementById("contact-form");
   if (form) {
     console.log('Adding event listener');
