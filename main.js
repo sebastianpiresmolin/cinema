@@ -156,14 +156,13 @@ window.onload = function () {
     }
   }
 
-
   (function () {
     emailjs.init("GPSeC8rGnNOyljaGF");
   })();
-  
+
   const form = document.getElementById("contact-form");
   if (form) {
-    console.log('Adding event listener');
+    console.log("Adding event listener");
     form.addEventListener("submit", function (event) {
       event.preventDefault();
       // generate a five-digit number for the contact_number variable
