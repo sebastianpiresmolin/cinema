@@ -1102,7 +1102,6 @@ input:focus {
   border-radius: 0.2rem;
 }
 
-
 .news-page-class p {
   display: inline;
   max-width: 196px;
@@ -1153,22 +1152,23 @@ input:focus {
 
 .card__news__wrapper {
   margin-bottom: 6.66%;
+}
 
-footer {
+.footer {
   max-width: 1000px;
   margin-left: 300px;
   padding-bottom: 100px;
   padding-top: 100px;
 }
-footer ul li {
+.footer ul li {
   list-style: none;
 }
-footer .footerSections {
+.footer .footerSections {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 @media only screen and (max-width: 500px) {
-  footer {
+  .footer {
     /* Dropdown Button */
     /* The container <div> - needed to position the dropdown content */
     /* Dropdown Content (Hidden by Default) */
@@ -1177,10 +1177,10 @@ footer .footerSections {
     /* Show the dropdown menu on hover */
     /* Change the background color of the dropdown button when the dropdown content is shown */
   }
-  footer #footerDesktop {
+  .footer #footerDesktop {
     display: none;
   }
-  footer .dropbtn {
+  .footer .dropbtn {
     background-color: #04AA6D;
     color: white;
     padding: 16px;
@@ -1189,11 +1189,11 @@ footer .footerSections {
     display: grid;
     margin: 20px 100px;
   }
-  footer .dropdown {
+  .footer .dropdown {
     position: relative;
     display: inline-block;
   }
-  footer .dropdown-content {
+  .footer .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -1202,35 +1202,72 @@ footer .footerSections {
     z-index: 1;
     padding-bottom: 50px;
   }
-  footer .dropdown-content a {
+  .footer .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
-  footer .dropdown-content a:hover {
+  .footer .dropdown-content a:hover {
     background-color: #ddd;
   }
-  footer .dropdown:hover .dropdown-content {
+  .footer .dropdown:hover .dropdown-content {
     display: block;
   }
-  footer .dropdown:hover .dropbtn {
+  .footer .dropdown:hover .dropbtn {
     background-color: #3e8e41;
   }
 }
 @media only screen and (min-width: 500px) {
-  footer .dropdown {
+  .footer .dropdown {
     display: none;
   }
-  footer #footerDesktop {
+  .footer #footerDesktop {
     display: block;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  footer #footerDesktop a {
+  .footer #footerDesktop a {
     display: grid;
     color: black;
     text-decoration: none;
     margin-bottom: 5px;
   }
+}
+
+/* Style for active buttons at movies.html */
+.filter-button.active {
+  background-color: #0b712f;
+  color: #fff;
+  border: 1px solid #0e0f0f;
+  padding-left: 25px;
+}
+
+/* Style for inactive buttons at movies.html */
+.filter-button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #0e0f0f;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Style for the checkmark only when the button is active */
+.filter-button.active .checkmark {
+  display: inline-block;
+}
+
+/* Style for the checkmark */
+.checkmark {
+  display: none; /* Initially hidden */
+  position: absolute;
+  left: 5px; /* Adjust the distance from the left */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px; /* Adjust the size of the checkmark */
+}
+
+ul {
+  list-style-type: none;
 }/*# sourceMappingURL=main.css.map */

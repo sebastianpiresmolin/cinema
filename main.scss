@@ -1115,7 +1115,7 @@ input:focus {
   margin-bottom: 6.66%;
 }
 
-footer{
+.footer{
   max-width: 1000px;
   margin-left: 300px;
   padding-bottom: 100px;
@@ -1196,3 +1196,40 @@ grid-template-columns: 1fr 1fr;
   margin-bottom: 5px;
 }
 }}
+
+/* Style for active buttons at movies.html */
+.filter-button.active {
+  background-color: $green;
+  color: $white;
+  border: 1px solid $grey;
+  padding-left: 25px;
+}
+
+/* Style for inactive buttons at movies.html */
+.filter-button {
+  background-color: $white;
+  color: $black;
+  border: 1px solid $grey;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Style for the checkmark only when the button is active */
+.filter-button.active .checkmark {
+  display: inline-block;
+}
+
+/* Style for the checkmark */
+.checkmark {
+  display: none; /* Initially hidden */
+  position: absolute;
+  left: 5px; /* Adjust the distance from the left */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px; /* Adjust the size of the checkmark */
+}
+
+ul {
+  list-style-type: none;
+}
