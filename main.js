@@ -5,7 +5,7 @@ class MovieCard {
     this.movie = movie;
   }
 
-  createCard(containerId) {
+  createCard(containerId, currentPage) {
     // Create a container div for each movie card
     var movieContainer = document.createElement("div");
     movieContainer.className = "movie-card";
@@ -46,6 +46,10 @@ class MovieCard {
       if (getIdsToHide().includes(this.movie.id)) {
         movieContainer.classList.add("hidden-movie");
       }
+
+      if (currentPage === "news.html") {
+        movieContainer.classList.add("news-page-class");
+      }
     } else {
       console.error(`Container with ID '${containerId}' not found.`);
     }
@@ -57,6 +61,8 @@ function getContainerIds() {
   switch (currentPage) {
     case "index.html":
       return ["movieContainer1", "movieContainer2"];
+    case "news.html":
+      return [];
     case "movies.html":
       return ["combinedMovieContainer"];
     default:
@@ -69,6 +75,8 @@ function getIdsToHide() {
   switch (currentPage) {
     case "index.html":
       return [6, 7, 8, 9, 10, 11, 12];
+    case "news.html":
+      return [];
     case "movies.html":
       return [];
     default:
@@ -76,19 +84,61 @@ function getIdsToHide() {
   }
 }
 
+class NewsCard {
+  constructor(news) {
+    this.news = news;
+  }
+
+  createCard(containerId, currentPage) {
+    var newsContainer = document.createElement("div");
+    newsContainer.className = "news-card";
+
+    var image = document.createElement("img");
+    image.src = this.news.image;
+    image.alt = this.news.title;
+
+    var title = document.createElement("h2");
+    title.textContent = this.news.title;
+
+    var date = document.createElement("p");
+    date.textContent = this.news.date;
+
+    newsContainer.appendChild(image);
+    newsContainer.appendChild(title);
+    newsContainer.appendChild(date);
+
+    var containerElement = document.getElementById(containerId);
+    if (containerElement) {
+      containerElement.appendChild(newsContainer);
+
+      if (currentPage === "news.html") {
+        newsContainer.classList.add("news-page-class");
+      }
+    } else {
+      console.error(`Container with ID '${containerId}' not found.`);
+    }
+  }
+}
+
 window.onload = function () {
-  // Create movie cards for movieContainer1 using moviesnow
+  const currentPage = window.location.pathname.split("/").pop();
   const containerId1 = 'movieContainer1';
   for (var i = 0; i < moviesnow.length; i++) {
     var movieCard = new MovieCard(moviesnow[i]);
-    movieCard.createCard(containerId1);
+    movieCard.createCard(containerId1, currentPage);
   }
 
   // Create movie cards for movieContainer2 using moviesupc
   const containerId2 = 'movieContainer2';
   for (var j = 0; j < moviesupc.length; j++) {
     var movieCard2 = new MovieCard(moviesupc[j]);
-    movieCard2.createCard(containerId2);
+    movieCard2.createCard(containerId2, currentPage);
+  }
+
+  const containerId3 = 'movieContainer3';
+  for (var j = 0; j < news.length; j++) {
+    var singleNews = new NewsCard(news[j]);
+    singleNews.createCard(containerId3, currentPage);
   }
 
   // Combine moviesnow and moviesupc into a new array
@@ -98,7 +148,7 @@ window.onload = function () {
   const combinedContainerId = 'combinedMovieContainer';
   for (var k = 0; k < allMovies.length; k++) {
     var combinedMovieCard = new MovieCard(allMovies[k]);
-    combinedMovieCard.createCard(combinedContainerId);
+    combinedMovieCard.createCard(combinedContainerId, currentPage);
   }
 };
 
@@ -185,3 +235,4 @@ window.onload = function() {
           });
   });
 };
+
