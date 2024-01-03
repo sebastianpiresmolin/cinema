@@ -73,7 +73,7 @@ function getContainerIds() {
 function getIdsToHide() {
   const currentPage = window.location.pathname.split("/").pop();
   switch (currentPage) {
-    case "index.html":
+    case "cinema":
       return [6, 7, 8, 9, 10, 11, 12];
     case "news.html":
       return [];
