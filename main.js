@@ -223,3 +223,32 @@ if (playVideo && videoPopup && hideVideo) {
 } else {
   console.log("One or more elements not found");
 }
+
+(function () {
+  // https://dashboard.emailjs.com/admin/account
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init("GPSeC8rGnNOyljaGF");
+  }
+})();
+
+window.onload = function () {
+  const form = document.getElementById("contact-form");
+
+  if (form) {
+    console.log('Adding event listener');
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      // generate a five digit number for the contact_number variable
+      this.contact_number.value = (Math.random() * 100000) | 0;
+      // emailJS ID's
+      emailjs.sendForm("service_7rijg9p", "template_bpwozvu", this).then(
+        function () {
+          console.log("SUCCESS!");
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+    });
+  } 
+};
