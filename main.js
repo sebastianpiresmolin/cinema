@@ -122,33 +122,38 @@ class NewsCard {
 
 window.onload = function () {
   const currentPage = window.location.pathname.split("/").pop();
-  const containerId1 = 'movieContainer1';
-  for (var i = 0; i < moviesnow.length; i++) {
-    var movieCard = new MovieCard(moviesnow[i]);
-    movieCard.createCard(containerId1, currentPage);
+
+  const containerId1 = "movieContainer1";
+  if (document.getElementById(containerId1)) {
+    for (var i = 0; i < moviesnow.length; i++) {
+      var movieCard = new MovieCard(moviesnow[i]);
+      movieCard.createCard(containerId1, currentPage);
+    }
   }
 
-  // Create movie cards for movieContainer2 using moviesupc
-  const containerId2 = 'movieContainer2';
-  for (var j = 0; j < moviesupc.length; j++) {
-    var movieCard2 = new MovieCard(moviesupc[j]);
-    movieCard2.createCard(containerId2, currentPage);
+  const containerId2 = "movieContainer2";
+  if (document.getElementById(containerId2)) {
+    for (var j = 0; j < moviesupc.length; j++) {
+      var movieCard2 = new MovieCard(moviesupc[j]);
+      movieCard2.createCard(containerId2, currentPage);
+    }
   }
 
-  const containerId3 = 'movieContainer3';
-  for (var j = 0; j < news.length; j++) {
-    var singleNews = new NewsCard(news[j]);
-    singleNews.createCard(containerId3, currentPage);
+  const containerId3 = "movieContainer3";
+  if (document.getElementById(containerId3)) {
+    for (var j = 0; j < news.length; j++) {
+      var singleNews = new NewsCard(news[j]);
+      singleNews.createCard(containerId3, currentPage);
+    }
   }
 
-  // Combine moviesnow and moviesupc into a new array
-  const allMovies = [...moviesnow, ...moviesupc];
-
-  // Create movie cards for the combined array
-  const combinedContainerId = 'combinedMovieContainer';
-  for (var k = 0; k < allMovies.length; k++) {
-    var combinedMovieCard = new MovieCard(allMovies[k]);
-    combinedMovieCard.createCard(combinedContainerId, currentPage);
+  const combinedContainerId = "combinedMovieContainer";
+  if (document.getElementById(combinedContainerId)) {
+    const allMovies = [...moviesnow, ...moviesupc];
+    for (var k = 0; k < allMovies.length; k++) {
+      var combinedMovieCard = new MovieCard(allMovies[k]);
+      combinedMovieCard.createCard(combinedContainerId, currentPage);
+    }
   }
 };
 
@@ -207,32 +212,14 @@ let playVideo = document.querySelector(".play-button");
 let videoPopup = document.querySelector(".clip");
 let hideVideo = document.querySelector(".bi-x-lg");
 
-playVideo.onclick = function () {
-  videoPopup.classList.toggle("clip");
-};
+if (playVideo && videoPopup && hideVideo) {
+  playVideo.onclick = function () {
+    videoPopup.classList.toggle("clip");
+  };
 
-hideVideo.onclick = function () {
-  videoPopup.classList.toggle("clip");
-};
-
-// Emailing functionality
-(function () {
-  // https://dashboard.emailjs.com/admin/account
-  emailjs.init("GPSeC8rGnNOyljaGF");
-})();
-
-window.onload = function() {
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      // generate a five digit number for the contact_number variable
-      this.contact_number.value = Math.random() * 100000 | 0;
-      // emailJS ID's
-      emailjs.sendForm('service_7rijg9p', 'template_bpwozvu', this)
-          .then(function() {
-              console.log('SUCCESS!');
-          }, function(error) {
-              console.log('FAILED...', error);
-          });
-  });
-};
-
+  hideVideo.onclick = function () {
+    videoPopup.classList.toggle("clip");
+  };
+} else {
+  console.log("One or more elements not found");
+}
