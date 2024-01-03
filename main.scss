@@ -1073,7 +1073,7 @@ input:focus {
 
 }
 
-#movieContainer3 {
+.movieContainer3 {
   padding: 0;
   margin: 0 auto;
   max-width: 1300px;
@@ -1232,4 +1232,23 @@ grid-template-columns: 1fr 1fr;
 
 ul {
   list-style-type: none;
+}
+
+.newsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 1000px;
+  justify-content: flex-start;
+  overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.filmAdvertising iframe {
+  width: 80vw;
+  max-width: 1000px;
+  height: 40vh;
 }

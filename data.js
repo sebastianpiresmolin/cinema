@@ -126,31 +126,37 @@ var moviesupc = [
 
 var news = [
     {
+        "id": 1,
         "title": "Årets mest efterlängtade biofilmer!",
         "image": "https://catalog.cinema-api.com/cf/images/ncg-images/36251cb8f638467eadef1c45b755bdf7.jpg?width=720&version=4585BFAB72DBFBF4A0E2617B0A1C6B1F&format=webp",
         "date": "2 januari 2024",
     },
     {
+        "id": 2,
         "title": "De mest sedda filmerna - vi minns tillbaka på bioåret 2023!",
         "image": "https://catalog.cinema-api.com/cf/images/ncg-images/3edd5cab153b4ab0945488f97514ecf3.jpg?width=720&version=9E4217CFA3366AC71FE0E0585F3222C2&format=webp",
         "date": "29 december 2023",
     },
     {
+        "id": 3,
         "title": "Filmtips för alla smaker - God Jul önskar Filmstaden!",
         "image": "https://catalog.cinema-api.com/cf/images/ncg-images/46d4497795914fc1afc9ec68a10f12b8.jpg?width=720&version=6DB1040A272D857293F0D8DCC1EDE6D3&format=webp",
         "date": "23 december 2023",
     },
     {
+        "id": 4,
         "title": "Vinnaren av vår Wonka-tävling är…",
         "image": "https://catalog.cinema-api.com/cf/images/ncg-images/a429dcdea3c34a43b9a9743f4c4ee9c2.jpg?width=720&version=99EDE28F6926D91138FF1352FCCAA60D&format=webp",
         "date": "22 december 2023",
     },
     {
+        "id": 5,
         "title": "Mikael Persbrandt: Jag ville göra Dag Hammarskjöld rättvisa",
         "image": "https://catalog.cinema-api.com/cf/images/ncg-images/2350ba6d71e7414db9ce18ab9e1fdaae.jpg?width=720&version=8D33D15CBE60BD8085DDD57082423713&format=webp",
         "date": "19 december 2023",
     },
     {
+        "id": 6,
         "title": "Tredje advent: Kika in bakom kulisserna på julens svenska storfilmer!",
         "image": "https://catalog.cinema-api.com/cf/images/ncg-images/e604b29278394216b86537a6f5328db2.jpg?width=720&version=06CC2BF5123E1CBAFC20B5C259DAE2B7&format=webp",
         "date": "17 december 2023",
