@@ -317,7 +317,7 @@ nav {
 
 #navLinks2 {
   margin-top: 5rem;
-  margin-left: 10.5rem;
+  margin-left: 48rem;
 }
 
 .nav__links2 ul {
@@ -1063,7 +1063,7 @@ input:focus {
   display: none;
   position: fixed;
   z-index: 1;
-  left: 8rem;
+  left: 50rem;
   top: 10rem;
   width: 65rem;
   height: 12rem;
@@ -1181,7 +1181,7 @@ input:focus {
     display: none;
   }
   .footer .dropbtn {
-    background-color: #04AA6D;
+    background-color: #04aa6d;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -1289,4 +1289,35 @@ ul {
   width: 80vw;
   max-width: 1000px;
   height: 40vh;
+}
+
+.modal__btn {
+  position: relative;
+  margin-top: 5rem;
+  margin-left: 80rem;
+  width: 8rem;
+  height: 1.5rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.spaceFooter {
+  margin-top: 65rem;
+}
+
+#logo {
+  width: 100%;
+  height: auto;
+  margin-left: -150px;
+}
+
+/*I-FRAME Location*/
+#pinnedMap {
+  position: fixed;
+  top: 25rem;
+  left: 47.5rem;
+  width: 70rem;
+  height: 40rem;
+  border: 1px solid #ccc;
 }/*# sourceMappingURL=main.css.map */
