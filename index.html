@@ -17,6 +17,7 @@
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <script src="main.js" defer></script>
   <script src="data.js" defer></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <link rel="stylesheet" href="main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,9 +112,8 @@
     <!----------------------------PÅ BIO NU END --------------------------->
     <!----------------------------FILMREKLAM START -------------------------->
     <article class="filmAdvertising" align="center">
-      <iframe width="1000" height="315"
-        src="https://www.youtube.com/embed/DCtjeTmJhYs?si=cbZ63StJYYydfSJU&amp;controls=0" title="YouTube video player"
-        frameborder="0"
+      <iframe src="https://www.youtube.com/embed/DCtjeTmJhYs?si=cbZ63StJYYydfSJU&amp;controls=0"
+        title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
       <h2>Hammarskjöld</h2>
@@ -154,6 +154,10 @@
     <!----------------------------KOMMANDE END ------------------------------->
 
     <!----------------------------NYHETER START ----------------------------->
+    <h1 class="movie__headers">Nyheter</h1>
+    <div class="movie__wrapper">
+      <div id="movieContainer3" class="newsContainer"></div>
+    </div>
     <!----------------------------NYHETER END ----------------------------->
   </main>
   <!--FOOTER START-->

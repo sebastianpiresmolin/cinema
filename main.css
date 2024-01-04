@@ -1108,7 +1108,7 @@ input:focus {
   padding-left: 20px;
 }
 
-#movieContainer3 {
+.movieContainer3 {
   padding: 0;
   margin: 0 auto;
   max-width: 1300px;
@@ -1118,12 +1118,12 @@ input:focus {
   overflow: hidden;
 }
 @media only screen and (max-width: 1000px) {
-  #movieContainer3 {
+  .movieContainer3 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (max-width: 700px) {
-  #movieContainer3 {
+  .movieContainer3 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -1270,6 +1270,25 @@ input:focus {
 
 ul {
   list-style-type: none;
+}
+
+.newsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 1000px;
+  justify-content: flex-start;
+  overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.filmAdvertising iframe {
+  width: 80vw;
+  max-width: 1000px;
+  height: 40vh;
 }
 
 .modal__btn {

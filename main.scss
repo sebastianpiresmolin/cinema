@@ -1071,7 +1071,7 @@ input:focus {
   padding-left: 20px;
 }
 
-#movieContainer3 {
+.movieContainer3 {
   padding: 0;
   margin: 0 auto;
   max-width: 1300px;
@@ -1238,34 +1238,21 @@ ul {
   list-style-type: none;
 }
 
-.modal__btn {
-  position: relative;
-  margin-top: 5rem;
-  margin-left: 80rem;
-  width: 8rem;
-  height: 1.5rem;
-  color: white;
-  border: none;
-  cursor: pointer;
+.newsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 1000px;
+  justify-content: flex-start;
+  overflow-x: auto;
 }
 
-.spaceFooter {
-  margin-top: 65rem;
+::-webkit-scrollbar {
+  display: none;
 }
 
-#logo {
-  width: 100%;
-  height: auto;
-  margin-left: -150px;
-}
-
-/*I-FRAME Location*/
-
-#pinnedMap {
-  position: fixed;
-  top: 25rem;
-  left: 47.5rem;
-  width: 70rem;
-  height: 40rem;
-  border: 1px solid #ccc;
+.filmAdvertising iframe {
+  width: 80vw;
+  max-width: 1000px;
+  height: 40vh;
 }
