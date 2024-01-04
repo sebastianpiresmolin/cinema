@@ -1,3 +1,4 @@
+/* Open and closing the modal*/
 document.addEventListener("DOMContentLoaded", function () {
     const openModalBtn = document.getElementById("openModalBtn");
     const modal = document.getElementById("getModal");
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     closeButton.addEventListener("click", closeModal);
   });
 
+  /*Making an "iframe" for the location of the cinema*/
   var mymap = L.map('pinnedMap').setView([58.1796426, 13.9533611], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
