@@ -47,7 +47,7 @@ class MovieCard {
         movieContainer.classList.add("hidden-movie");
       }
 
-      if (currentPage === "news.html") {
+      if (currentPage === "news") {
         movieContainer.classList.add("news-page-class");
       }
     } else {
@@ -59,11 +59,11 @@ class MovieCard {
 function getContainerIds() {
   const currentPage = window.location.pathname.split("/").pop();
   switch (currentPage) {
-    case "index.html":
+    case "index":
       return ["movieContainer1", "movieContainer2"];
-    case "news.html":
+    case "news":
       return [];
-    case "movies.html":
+    case "movies":
       return ["combinedMovieContainer"];
     default:
       return [];
@@ -73,11 +73,11 @@ function getContainerIds() {
 function getIdsToHide() {
   const currentPage = window.location.pathname.split("/").pop();
   switch (currentPage) {
-    case "index.html":
+    case "index":
       return [6, 7, 8, 9, 10, 11, 12];
-    case "news.html":
+    case "news":
       return [];
-    case "movies.html":
+    case "movies":
       return [];
     default:
       return [];
@@ -111,7 +111,7 @@ class NewsCard {
     if (containerElement) {
       containerElement.appendChild(newsContainer);
 
-      if (currentPage === "news.html") {
+      if (currentPage === "news") {
         newsContainer.classList.add("news-page-class");
       }
     } else {
