@@ -75,9 +75,10 @@ app.get('/nothing', async (request, response) => {
   renderPage(response, 'nothing');
 });
 
-
+app.get('/Welcome', async (request, response) => {
+  renderPage(response, 'Welcome');
+});
 
 app.use('/static', express.static('./static'));
 
 app.listen(3080);
-
