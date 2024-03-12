@@ -24,7 +24,6 @@ const MENU = [
 
 async function renderPage(response, page) {
   const currentPath = (page == 'index')? '/' : `/${page}`;
-
   response.render(page, {
     menuItems: MENU.map(item => {
       return {
@@ -65,6 +64,20 @@ app.get('/QandA', async (request, response) => {
 });
 
 
+app.get('/Login', async (request, response) => {
+  renderPage(response, 'Login');
+});
+app.get('/Signup', async (request, response) => {
+  renderPage(response, 'Signup');
+});
+
+app.get('/nothing', async (request, response) => {
+  renderPage(response, 'nothing');
+});
+
+
+
 app.use('/static', express.static('./static'));
 
 app.listen(3080);
+
