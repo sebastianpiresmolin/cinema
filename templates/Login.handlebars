@@ -9,25 +9,24 @@
     <div class="max-w-[300px] grid gap-6">
       <h1 class="text-3xl font-bold text-[#ffffff]">Login</h1>
       <p class="text-[#696969]">Enjoy our member only offers</p>
-      <form action="" class="grid grid-cols-1 gap-4">
+      <form action="/Welcome" method="get"  class="grid grid-cols-1 gap-4">
      
 
-        <input
-          type="email"
-          placeholder="Your Email"
-          class="block w-full px-4 py-2 rounded-md bg-[#FFE4B5] border border-transparent focus:outline-none focus:ring-2 focus:ring-[#FF69B4]"
+        <input 
+          type="email" id="email"
+          placeholder="Your Email" 
+          class="block w-full px-4 py-2 rounded-md bg-[#FFE4B5] border border-transparent focus:outline-none focus:ring-2 focus:ring-[#FF69B4]" required
         />
         <input
-          type="password"
+          type="password" id="password"
           placeholder="Your Password"
-          class="block w-full px-4 py-2 rounded-md bg-[#FFE4B5] border border-transparent focus:outline-none focus:ring-2 focus:ring-[#FF69B4]"
+          class="block w-full px-4 py-2 rounded-md bg-[#FFE4B5] border border-transparent focus:outline-none focus:ring-2 focus:ring-[#FF69B4]" required
         />
         
-       <a href="/Welcome" id="Bg" class="block bg-[#4B0082] text-white rounded-lg py-2 text-center">Sign In</a>
-      </form>
+      <button type="submit" class="block bg-[#4B0082] text-white rounded-lg py-2 text-center">Login</button>      </form>
       <div class="text-[#696969] text-sm">
         <p>Don't have an account?
-          <a href="/Signup" style="color: #ffffff; font-weight: bold;">Sign Up</a></p>
+          <a href="/Signup" style="color: #ffffff; font-weight: bold;">Signup</a></p>
         <p>Forgot your password?
           <a href="/nothing" style="color: #ffffff; font-weight: bold;">Reset Password</a></p>
       </div>
